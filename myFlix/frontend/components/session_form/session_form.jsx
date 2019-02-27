@@ -19,8 +19,8 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+
+    this.props.processForm(this.state);
   }
 
   renderErrors() {
@@ -53,7 +53,7 @@ class SessionForm extends React.Component {
             <input type="password" value={this.state.password} onChange={this.update('password')} className='login_input' />
             </label>
             <br />
-            <input type="submit" value={this.props.formType} className="session_submit" />
+            <input type="submit" onClick={this.handleSubmit} value={this.props.formType} className="session_submit" />
           </div>
         </form>
       </div>
