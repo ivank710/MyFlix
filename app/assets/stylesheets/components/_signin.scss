@@ -35,10 +35,10 @@ a{
 
 .login_form_box {
   background-color: rgba(black, 0.8);
-  width: 220px;
-  border: 30px;
-  padding: 50px;
-  margin: 30px;
+  width: 250px;
+  border: 50px;
+  padding: 60px;
+  margin: 50px;
   height: 370px;
 }
 
@@ -66,6 +66,8 @@ a{
 .demo_submit{
   background-color: rgba(grey, 0.5);
   color: white;
+  padding: 10px;
+  border-radius: 3px;
 }
 
 .user_tag{

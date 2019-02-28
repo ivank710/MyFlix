@@ -1,0 +1,32 @@
+.splash_background{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url('https://www.iptvbr.org/wp-content/uploads/2018/09/Netflix-Background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(2px) grayscale(80%); 
+  filter: blur(2px) grayscale(80%);
+ 
+  z-index: -1;
+}
+
+.sign_in_box{
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px;
+}
+
+.sign_in_button{
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.splash_header{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
