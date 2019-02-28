@@ -43,7 +43,8 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-    
+      <>
+        <div className="background_img"></div>
         <div className="login_form_container">
           <form onSubmit={this.handleSubmit} className="login_form_box">
             <div className='sign_in_tag'>{this.props.formType}</div>
@@ -68,7 +69,7 @@ class SessionForm extends React.Component {
           </form>
         </div>
       
-      
+      </>
     )
 
   }
