@@ -7,11 +7,13 @@ import {AuthRoute} from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <h1>MyFlix </h1>
+      
+      <h1 className="head_logo"> MyFlix </h1>
     </header>
-
-    <AuthRoute exact path="/login" component={sign_in_form_container} />
-    <AuthRoute exact path="/signup" component={signup_form_container} />
+    <Switch>
+      <AuthRoute exact path="/login" component={sign_in_form_container} />
+      <AuthRoute exact path="/signup" component={signup_form_container} />
+    </Switch>
   </div>
 );
 
