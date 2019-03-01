@@ -13,7 +13,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  processForm: (user) => dispatch(login(user))
+  processForm: (user) => dispatch(login(user)),
+  demoLogin: (user) => dispatch(login(user))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SessionForm));
