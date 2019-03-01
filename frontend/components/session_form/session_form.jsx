@@ -31,11 +31,13 @@ class SessionForm extends React.Component {
 
   handleDemoSubmit(e) {
     e.preventDefault();
-    // const demoUser = { email: 'flix1234@yahoo.com', password: '123456' };
-    // this.props.demoLogin(demoUser);
+    const demoUser = { email: 'flix1234@yahoo.com', password: '123456' };
+    this.props.demoLogin(demoUser);
 
-    let email ='flix1234@yahoo.com'.split("");
-    let password ='123456'.split("");
+    // let email ='flix1234@yahoo.com'.split("");
+    // let password ='123456'.split("");
+
+    
   }
 
   renderErrors() {
