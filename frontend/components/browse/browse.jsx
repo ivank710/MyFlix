@@ -9,7 +9,7 @@ class Browse extends React.Component {
   }
 
   render() {
-    console.log('helllooo');
+    
     return (
       <>
         <div className="curr_user">

@@ -4,29 +4,100 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-image: url('https://www.iptvbr.org/wp-content/uploads/2018/09/Netflix-Background.jpg');
+
+  background-image: image-url('netflix-splash2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-filter: blur(2px) grayscale(80%); 
-  filter: blur(2px) grayscale(80%);
+  background-color: rgba(5, 5, 5, 0.8); 
+  background-blend-mode: multiply;
+  
+
  
   z-index: -1;
 }
 
-.sign_in_box{
+.logo_box{
   display: flex;
-  justify-content: flex-end;
-  padding: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
+.logo{
+  position: absolute;
+  top: 25px;
+  background-image: image-url('worldFlix.png');
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 240px;
+}
+
+
 .sign_in_button{
-  justify-content: flex-end;
-  padding: 30px;
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  background-color: red;
+  border-radius: 4px;
+  color: white;
+  padding: 6px 22px;
+  text-align: center;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  border-color: red;
+}
+
+.sign_up_button{
+  background-color: red;
+  border-color: red;
+  border-radius: 3px;
+  color: white;
+  padding: 20px 180px;
+  text-align: center;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.splash_container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
 }
 
 .splash_header{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   color: white;
 }
+
+.main_text{
+  display: flex;
+  justify-content: center;
+}
+
+.main_splash_text{
+  font-family: sans-serif;
+  font-size: 85px;
+  font-weight: 880;
+  padding: 15px;
+}
+
+.sub_splash_text{
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+
 

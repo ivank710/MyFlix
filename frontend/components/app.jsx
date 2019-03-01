@@ -8,17 +8,12 @@ import splash from './splash';
 import browse_container from '../components/browse/browse_container';
 
 const App = () => (
-  <div>
-    <header>
-      
-      <h1 className="head_logo"> MyFlix </h1>
-    </header>
-   
+  <div>   
 
-      <AuthRoute exact path="/login" component={sign_in_form_container} />
-      <AuthRoute exact path="/signup" component={signup_form_container} />
-      <ProtectedRoute exact path='/browse' component={browse_container} />
-      <AuthRoute exact path="/" component={splash} />
+    <AuthRoute exact path="/login" component={sign_in_form_container} />
+    <AuthRoute exact path="/signup" component={signup_form_container} />
+    <ProtectedRoute exact path='/browse' component={browse_container} />
+    <AuthRoute exact path="/" component={splash} />
  
    
   </div>

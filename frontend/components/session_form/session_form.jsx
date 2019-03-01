@@ -27,7 +27,7 @@ class SessionForm extends React.Component {
   handleDemoSubmit(e) {
     e.preventDefault();
 
-    this.props.processForm({email: 'flix123@yahoo.com', password:'123456'});
+    this.props.demoLogin({email: 'flix1234@yahoo.com', password:'123456'});
   }
 
   renderErrors() {
@@ -43,40 +43,48 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    return (
+      <>
+        <div className="background_img"></div>
 
-   
-      return (
-        <>
-          <div className="background_img"></div>
-          <div className="login_form_container">
-            <form onSubmit={this.handleSubmit} className="login_form_box">
-              <div className='sign_in_tag'>{this.props.formType}</div>
+        <div className="logo_box">
+          <div className="logo"></div>
+        </div>
+
+        <div className="login_form_container">
+          <form onSubmit={this.handleSubmit} className="login_form_box">
+            <div className='sign_in_tag'>{this.props.formType}</div>
+            <br />
+
+            <div className='login_form'>
               <br />
-
-              <div className='login_form'>
-                <br />
-                <input type="text" value={this.state.email} onChange={this.update('email')} placeholder='Email' className='login_input' />
-                <br />
-                <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" className='login_input' />
-                <br />
-                <div className="errors">
-                  {this.renderErrors()}
-                </div>
-                <br />
-                <input type="submit" onClick={this.handleSubmit} value={this.props.formType} className="session_submit" />
-                <br /> <br />
-                <input type="submit" onClick={this.handleDemoSubmit} value='Demo' className="demo_submit" />
+              <input type="text" value={this.state.email} onChange={this.update('email')} 
+                placeholder='Email' className='login_input' />
+              <br />
+              <input type="password" value={this.state.password} onChange={this.update('password')} 
+                placeholder="Password" className='login_input' />
+              <br />
+              <div className="errors">
+                {this.renderErrors()}
               </div>
-              <br /><br /><br /><br />
-              <div className='user_tag'>
-                Please {this.props.formType} or {this.props.navLink}
-              </div>
-            </form>
-          </div>
 
-        </>
-      )
-    }
+              <br />
+              <input type="submit" onClick={this.handleSubmit} 
+                value={this.props.formType} className="session_submit" />
+              <br /> <br />
+              <input type="submit" onClick={this.handleDemoSubmit} 
+                value='Demo' className="demo_submit" />
+            </div>
+            <br /><br /><br /><br />
+            <div className='user_tag'>
+              Please {this.props.formType} or {this.props.navLink}
+            </div>
+          </form>
+        </div>
+
+      </>
+    )
+  }
 
   
 }
