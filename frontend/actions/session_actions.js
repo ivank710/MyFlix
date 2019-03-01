@@ -19,9 +19,9 @@ const receiveErrors = (errors) => ({
   errors
 });
 
-const clearSessionErrors = (errors) => ({
+export const clearSessionErrors = () => ({
   type: CLEAR_SESSION_ERRORS,
-  errors
+  errors: []
 });
 
 export const signup = (user) => dispatch => (
@@ -48,6 +48,3 @@ export const logout = () => dispatch => (
   ))
 );
 
-// export const clearErrors = (errors) => dispatch => (
-  
-// )
