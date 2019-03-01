@@ -17,6 +17,7 @@ class SessionForm extends React.Component {
     this.props.clearErrors();
   }
 
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -30,9 +31,11 @@ class SessionForm extends React.Component {
 
   handleDemoSubmit(e) {
     e.preventDefault();
-    const demoUser = { email: 'flix1234@yahoo.com', password: '123456' };
-    
-    this.props.demoLogin(demoUser);
+    // const demoUser = { email: 'flix1234@yahoo.com', password: '123456' };
+    // this.props.demoLogin(demoUser);
+
+    let email ='flix1234@yahoo.com'.split("");
+    let password ='123456'.split("");
   }
 
   renderErrors() {
@@ -58,18 +61,19 @@ class SessionForm extends React.Component {
 
         <div className="login_form_container">
           <form onSubmit={this.handleSubmit} className="login_form_box">
-            <div className='sign_in_tag'>{this.props.formType}</div>
-            <br /> <br/>
 
             <div className='login_form'>
               <br/>
+              <div className='sign_in_tag'>{this.props.formType}</div>
+              <br/><br/><br/>
               <input type="text" value={this.state.email} onChange={this.update('email')} 
-                placeholder='Email' className='login_input' />
-              
-              <br/>
+                className='login_input' placeholder="Email"/>
+                <br/>
               <input type="password" value={this.state.password} onChange={this.update('password')} 
-                placeholder="Password" className='login_input' />
+                className='login_input' placeholder="Password"/>
+
               <br /> 
+
               <div className="errors">
                 {this.renderErrors()}
               </div>
@@ -80,14 +84,15 @@ class SessionForm extends React.Component {
               <br /> 
               <input type="submit" onClick={this.handleDemoSubmit} 
                 value='Demo' className="demo_submit" />
+
+            <br /><br /><br /><br /> <br/><br/><br/>
+              <div className='user_tag_parent'>
+                <div className="form_type">Please {this.props.formType} or </div>
+                &nbsp;&nbsp;
+                <div className="nav_link"> {this.props.navLink} </div>
+              </div>
             </div>
 
-            <br /><br /><br /><br /> <br/>
-            <div className='user_tag_parent'>
-              <div className="form_type">Please {this.props.formType} or </div>
-              &nbsp;&nbsp;
-              <div className="nav_link"> {this.props.navLink} </div>
-            </div>
 
           </form>
         </div>

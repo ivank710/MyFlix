@@ -28,12 +28,14 @@ a{
 
 
 .sign_in_tag{
+ 
   color: white;
   font-family: sans-serif;
   font-size: 35px;
 }
 
-.login_form_container{
+
+.login_form_container,{
   position: absolute;
   top: 0;
   bottom: 0;
@@ -43,41 +45,76 @@ a{
   justify-items: center;
   justify-content: center;
   align-items: center;
-  
 }
 
 .login_form_box {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(black, 0.7);
   width: 300px;
-  border: 40px;
-  padding: 65px;
-  margin: 35px;
+  padding: 60px;
   height: 450px;
   border-radius: 5px;
+
 }
 
 .login_form{
   display: flex;
+  justify-items: center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   align-items: stretch;
 }
 
 .login_input{
-  color: white;
-  background-color: rgba(grey, 0.5);
+  background-color: #333333;
   padding: 11px 25px;
   border-radius: 4px;
-  border-color: rgba(grey, 0.5);
+  border-color: rgba(grey, .3);
   font-size: 19px;
-  font-weight: 400;
 }
+
+.login_input:focus{
+  
+  color: white;
+  opacity: 1; 
+  font-weight: lighter;
+  font-size: 20px;
+  bottom: 10px;
+}
+
+.login_input::placeholder{
+  position: relative;
+  color: #787878;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-weight: lighter;
+}
+
+.login_input:focus::placeholder{
+  color: #787878;
+  top: -16px;
+  font-size: 12px;
+  transition: ease .5s;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  box-shadow: inset 0px 0px 0px 1.5px #333333;
+  outline: none;
+  border: 1px solid #333333;
+}
+
 
 .errors{
   color: rgb(229,9,20);
   font-family: sans-serif;
-  font-size: 19px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .session_submit{
@@ -87,8 +124,8 @@ a{
   border-radius: 4px;
   border-color: rgb(229,9,20);
   padding: 11px 18px;
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 22px;
+  font-weight: 200;
 }
 
 .session_submit:hover{
@@ -96,13 +133,13 @@ a{
 }
 
 .demo_submit{
-  background-color: rgba(grey, 0.5);
+  background-color: rgba(grey, 0.4);
   color: white;
   padding: 11px 18px;
   border-radius: 4px;
-  border-color: rgba(grey, 0.5);
-  font-size: 20px;
-  font-weight: 300;
+  border-color: rgba(grey, 0.4);
+  font-size: 22px;
+  font-weight: 200;
 }
 
 .demo_submit:hover{
