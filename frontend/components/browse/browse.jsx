@@ -14,25 +14,17 @@ class Browse extends React.Component {
       <>
         <div className="nav_bar_color"></div>
 
-        <div className="nav_bar_container">
-
-          <div className="nav_logo_box">
-            <div className="nav_logo"></div>
-          </div>
-
-          <div className="dropdown_container">
-
-            
-            
-              <Link to="/login">
-                <button className="logout_button" onClick={this.props.logout}>Sign out of Netflix</button>
-              </Link>
-           
-             
-            
-          </div>
+        <ul className="nav_bar_container">
+          <li className="nav_logo"></li>
           
-        </div>
+          <li><div className="dropdown_img"></div> </li>
+          <li><div className="caret"><i className="fas fa-caret-down fa-1.5x"></i></div></li>
+          
+        </ul>
+
+        <Link to="/login">
+          <button className="logout_button" onClick={this.props.logout}>Sign out of Netflix</button>
+        </Link>
 
       </>
     )

@@ -1,22 +1,41 @@
-.nav_bar_container{
-  display: flex;
+ul.nav_bar_container{
+  list-style-type: none;
+  margin: 0;
+  padding: 40px;
+  overflow: hidden;
+  background-color: rgba(black, .75); 
 }
 
-.nav_logo_box{
-  display: flex;
-  justify-content: flex-start;
-}
 
-.nav_logo{
+
+li.nav_logo{
   position: absolute;
-  top: 25px;
-  left: 35px;
-  background-image: image-url('worldFlix_edit.png');
+  top: 15px;
+  left: 50px;
+  background-image: url('worldFlix_edit.png');
   background-repeat: no-repeat;
-  height: 80px;
-  width: 240px;
+  height: 50px;
+  width: 170px;
 }
 
 .dropdown_img{
-  background-image: image-url('')
+  position: absolute;
+  top: 18px;
+  right: 70px;
+  background-image: url('profile_avatar_copy.png');
+  background-repeat: no-repeat;
+  height: 42px;
+  width: 42px;
+  border-color: #167F81;
 }
+
+
+.caret {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: white;
+  
+}
+
+
