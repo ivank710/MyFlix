@@ -1,0 +1,14 @@
+.nav_logo_box{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav_logo{
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  background-image: image-url('worldFlix_edit.png');
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 240px;
+}
