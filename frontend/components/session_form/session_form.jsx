@@ -45,10 +45,10 @@ class SessionForm extends React.Component {
   demoLogin(email, password) {
     if(email.length > 0) {
       this.setState({email: this.state.email += email.shift()},
-        () => window.setTimeout(() => this.demoLogin(email, password), 120));
+        () => window.setTimeout(() => this.demoLogin(email, password), 100));
     } else if(password.length > 0) {
       this.setState({password: this.state.password += password.shift()},
-        () => window.setTimeout(() => this.demoLogin(email, password), 150));
+        () => window.setTimeout(() => this.demoLogin(email, password), 120));
     } else if(email.length === 0 && password.length === 0) {
       this.props.demoLogin(this.state);
     }

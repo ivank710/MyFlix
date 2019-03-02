@@ -20,15 +20,20 @@ class Browse extends React.Component {
             <div className="nav_logo"></div>
           </div>
 
-          <div>
-            <Link to="/login">
-              <button className="logout_button" onClick={this.props.logout}>Sign out of Netflix</button>
-            </Link>
+          <div className="dropdown_container">
+
+            
+            
+              <Link to="/login">
+                <button className="logout_button" onClick={this.props.logout}>Sign out of Netflix</button>
+              </Link>
+           
+             
+            
           </div>
           
         </div>
 
-        
       </>
     )
   }

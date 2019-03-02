@@ -1,3 +1,7 @@
+.nav_bar_container{
+  display: flex;
+}
+
 .nav_logo_box{
   display: flex;
   justify-content: flex-start;
@@ -11,4 +15,8 @@
   background-repeat: no-repeat;
   height: 80px;
   width: 240px;
+}
+
+.dropdown_img{
+  background-image: image-url('')
 }
