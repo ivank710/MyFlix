@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 class Browse extends React.Component {
   constructor(props) {
@@ -15,6 +16,20 @@ class Browse extends React.Component {
         <div className="curr_user">
           <h1>{this.props.currentUser.email}</h1>
         </div>
+
+        <div className="nav_bar_color"></div>
+
+        <div className="nav_logo_box">
+          <div className="nav_logo"></div>
+        </div>
+
+        <div>
+          <Link to="/login">
+            <button className="logout_button" onClick={this.props.logout}>Sign out of Netflix</button>
+          </Link>
+        </div>
+
+        
       </>
     )
   }

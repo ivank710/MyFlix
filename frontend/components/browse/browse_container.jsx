@@ -1,5 +1,4 @@
 import {connect} from 'react-redux';
-import React from 'react';
 import Browse from './browse';
 
 const mapStateToProps = state => ({
