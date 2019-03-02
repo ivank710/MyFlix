@@ -57,7 +57,6 @@ a{
   padding: 60px;
   height: 450px;
   border-radius: 5px;
-
 }
 
 .login_form{
@@ -75,6 +74,9 @@ a{
   border-radius: 4px;
   border-color: rgba(grey, .3);
   font-size: 19px;
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 .login_input:focus{
