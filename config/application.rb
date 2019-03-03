@@ -1,5 +1,6 @@
 require_relative 'boot'
-
+require 'rails/all'
+require "active_storage/engine"
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
