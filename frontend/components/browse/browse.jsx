@@ -10,6 +10,7 @@ class Browse extends React.Component {
   }
 
   render() {
+
     return (
       <>
         <div className="nav_bar_container">
@@ -20,13 +21,15 @@ class Browse extends React.Component {
               </button>
               &nbsp;&nbsp;&nbsp;  
               
-                <i className="fa fa-caret-down"></i>
+              <i className="fa fa-caret-down"></i>
               
               <div className="dropdown-content">
-                <Link to="/login">
-                  <button className='sign_out_button' onClick={this.props.logout} type="submit">Sign out of Worldflix</button>
-                </Link>
+              <br/>
+                <div className="welcome">Hello!
                 
+                  <button className='sign_out_button' onClick={this.props.logout} type="submit">Sign out of Worldflix</button>
+               
+              </div>
               </div>
             </div>
             

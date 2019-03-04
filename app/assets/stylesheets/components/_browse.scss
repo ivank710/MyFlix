@@ -1,7 +1,7 @@
 .nav_bar_container{
   padding: 15px;
   overflow: hidden;
-  background-color: rgba(black, .7); 
+  background-color: rgba(black, .8); 
 }
 
 .nav_logo{
@@ -29,6 +29,8 @@
   overflow: hidden;
   padding-right: 50px;
   color: white;
+  cursor: pointer;
+
 }
 
 .dropbtn{
@@ -37,7 +39,7 @@
   height: 40px;
   width: 42px;
   border-color: #167F81;
-
+  cursor: pointer;
 }
 
 
@@ -59,28 +61,47 @@
   display: none;
   position: absolute;
   right: 62px;
-  background-color: rgba(black, .7);
-  min-width: 160px;
-
+  background-color: rgba(grey, .8);
+  min-width: 140px;
+  height: 150px;
   z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: blue;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
+ 
+  
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-  text-underline-position: auto;
+  
 }
+
+.welcome{
+  display: flex;
+  align-items: flex-end;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+  flex-direction: column;
+  
+}
+
+.sign_out{
+  display: flex;
+  justify-content: flex-start;
+  background-color: blue;
+  
+}
+
+.sign_out_button{
+  
+  background-color: green;
+  color: white;
+ 
+}
+
+// .sign_out_button:hover {
+//     text-decoration: underline;
+//     cursor: pointer;
+// }
 
 
 
