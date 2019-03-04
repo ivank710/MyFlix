@@ -12,20 +12,27 @@ class Browse extends React.Component {
   render() {
     return (
       <>
-        <div className="nav_bar_color"></div>
-
-        <ul className="nav_bar_container">
-          <li className="nav_logo"></li>
+        <div className="nav_bar_container">
+            <div className="nav_logo"></div>
           
-          <li><div className="dropdown_img"></div> </li>
-          <li><div className="caret"><i className="fas fa-caret-down fa-1.5x"></i></div></li>
+            <div className="dropdown">
+              <button className="dropbtn">
+              </button>
+              &nbsp;&nbsp;&nbsp;  
+              
+                <i className="fa fa-caret-down"></i>
+              
+              <div className="dropdown-content">
+                <Link to="/login">
+                  <button className='sign_out_button' onClick={this.props.logout} type="submit">Sign out of Worldflix</button>
+                </Link>
+                
+              </div>
+            </div>
+            
+          </div>
           
-        </ul>
-
-        <Link to="/login">
-          <button className="logout_button" onClick={this.props.logout}>Sign out of Netflix</button>
-        </Link>
-
+       
       </>
     )
   }

@@ -1,41 +1,132 @@
-ul.nav_bar_container{
-  list-style-type: none;
-  margin: 0;
-  padding: 40px;
+.nav_bar_container{
+  padding: 15px;
   overflow: hidden;
-  background-color: rgba(black, .75); 
+  background-color: rgba(black, .7); 
 }
 
-
-
-li.nav_logo{
+.nav_logo{
   position: absolute;
   top: 15px;
-  left: 50px;
+  left: 45px;
   background-image: url('worldFlix_edit.png');
   background-repeat: no-repeat;
   height: 50px;
   width: 170px;
 }
 
-.dropdown_img{
-  position: absolute;
-  top: 18px;
-  right: 70px;
+.nav_bar_container a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+  padding-right: 50px;
+  color: white;
+}
+
+.dropbtn{
   background-image: url('profile_avatar_copy.png');
   background-repeat: no-repeat;
-  height: 42px;
+  height: 40px;
   width: 42px;
   border-color: #167F81;
+
 }
 
 
-.caret {
+
+// .dropdown .dropbtn {
+//   font-size: 16px;  
+//   border: none;
+//   outline: none;
+//   color: white;
+//   padding: 14px 16px;
+//   background-color: inherit;
+//   font-family: inherit;
+//   margin: 0;
+// }
+
+
+
+.dropdown-content {
+  display: none;
   position: absolute;
-  top: 30px;
-  right: 50px;
-  color: white;
-  
+  right: 62px;
+  background-color: rgba(black, .7);
+  min-width: 160px;
+
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: blue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  text-underline-position: auto;
 }
 
 
+
+// .nav_bar_container div.dropdown_img {
+//   float: right;
+//   padding: 10px 10px;
+// }
+
+// .dropdown_box{
+//   float: right;
+//   overflow: hidden;
+// }
+
+// .dropdown_box .dropdown_img{
+//   position: absolute;
+//   top: 18px;
+//   right: 70px;
+//   background-image: url('profile_avatar_copy.png');
+//   background-repeat: no-repeat;
+//   height: 40px;
+//   width: 42px;
+//   border-color: #167F81;
+// }
+
+// .caret {
+//   position: absolute;
+//   top: 30px;
+//   right: 10px;
+//   color: white;
+// }
+
+// .dropdown_content {
+//   display: none;
+//   position: absolute;
+//   background-color: #f9f9f9;
+//   min-width: 160px;
+//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//   z-index: 1;
+// }
+
+// .dropdown_content a{
+//   color: blue;
+//   padding: 12px 16px;
+//   display: block;
+// }
+
+// .dropdown-content button:hover {background-color: blue;}
+
+// .dropdown:hover .dropdown-content {display: block;}
