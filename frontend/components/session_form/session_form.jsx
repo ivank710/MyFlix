@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
   handleDemoSubmit(e) {
     e.preventDefault();
     
-    let demoEmail = 'flix1234@yahoo.com'.split("");
+    let demoEmail = 'demo@gmail.com'.split("");
     let demoPassword = '123456'.split("");
 
     this.setState({
