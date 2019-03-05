@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import FeaturedMovie from './featured_movie';
+import Genre from '../movies/genre';
 
 class Browse extends React.Component {
   constructor(props) {
@@ -12,8 +13,7 @@ class Browse extends React.Component {
 
   componentDidMount() {
     this.props.fetchMovies();
-    // const vid = document.getElementsByClassName(`${this.props.className}`);
-    // vid[0].play();
+    
   }
 
   navBar(){
@@ -37,7 +37,7 @@ class Browse extends React.Component {
                 <br/>
                 <div className="welcome">Hello, {username} </div>
                 <br/>
-                <button className='sign_out_button' onClick={this.props.logout} type="submit">Sign out of Worldflix</button>
+                <div className='sign_out_button' onClick={this.props.logout} type="submit">Sign out of Worldflix</div>
     
               </div>
             </div>
@@ -48,12 +48,17 @@ class Browse extends React.Component {
   }
 
   render() {
+    const allMovies = this.props.movies;
+    const euroMovies = allMovies.filter(movie => movie.genre === "Europe")
+    console.log(euroMovies);
 
     return (
       <>
         <div>{this.navBar()}</div>
 
-        <FeaturedMovie movie={this.props.movies[0]} className={this.props.className} />
+        <FeaturedMovie movie={this.props.movies[0]} className="vid" />
+        
+       
       </>
     )
   }
