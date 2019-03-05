@@ -15,7 +15,7 @@ demo_user = User.create!(email: 'demo@gmail.com', password: '123456')
 
 piazza = Movie.create!(title: "Piazza dei Miracoli", description: "The Piazza dei Miracoli, is a walled 8.87-hectare area located in Pisa, Tuscany, Italy. It is recognized as an important centre of European medieval art.", year: 2017, genre: "Europe")
 piazza_vid = open('https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Piazza+dei+Miracoli_+Pisa_+Italy.mp4')
-piazza_photo = open('app/assets/images/Piazza.jpg')
+piazza_photo = File.open('app/assets/images/Piazza.jpg')
 piazza.video.attach(io: piazza_vid, filename: 'piazza-vid.mp4')
 piazza.photo.attach(io: piazza_photo, filename: 'piazza-photo.jpg')
 

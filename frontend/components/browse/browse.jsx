@@ -12,8 +12,23 @@ class Browse extends React.Component {
   }
 
   componentDidMount() {
+
     this.props.fetchMovies();
-    
+  }
+
+  getPhotos(movies) {
+    let photos = [];
+
+    for(let i = 0; i < movies.length; i++) {
+      photos.push(movies[i].photo);
+    }
+
+    return photos;
+  }
+
+  getMoviesByGenre(genre) {
+    const movies = this.props.movies.filter(movie => movie.genre === genre);
+    return movies;
   }
 
   navBar(){
@@ -49,15 +64,16 @@ class Browse extends React.Component {
 
   render() {
     const allMovies = this.props.movies;
-    const euroMovies = allMovies.filter(movie => movie.genre === "Europe")
-    console.log(euroMovies);
-
+    const euro = "Europe"
+    const euroMovies = this.getMoviesByGenre("Europe");
+    const euroPhotos = this.getPhotos(euroMovies);
+    console.log(allMovies);
     return (
       <>
         <div>{this.navBar()}</div>
 
-        <FeaturedMovie movie={this.props.movies[0]} className="vid" />
-        
+        <FeaturedMovie className="vid" />
+        <Genre name={euro} photos={euroPhotos}/>
        
       </>
     )
