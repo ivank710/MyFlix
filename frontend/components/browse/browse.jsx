@@ -63,16 +63,19 @@ class Browse extends React.Component {
   }
 
   render() {
-    const allMovies = this.props.movies;
     const euro = "Europe"
+    const asia = "Asia"
     const euroMovies = this.getMoviesByGenre("Europe");
+    const asiaMovies = this.getMoviesByGenre("Asia");
     const euroPhotos = this.getPhotos(euroMovies);
-    console.log(euroPhotos);
+    const asiaPhotos = this.getPhotos(asiaMovies);
+    
     return (
       <>
         <div>{this.navBar()}</div>
 
         <FeaturedMovie className="vid" />
+        <Genre name={asia} photos={asiaPhotos}/>
         <Genre name={euro} photos={euroPhotos}/>
        
       </>
