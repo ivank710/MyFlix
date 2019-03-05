@@ -1,0 +1,26 @@
+.scrolling-wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .image {
+    flex: 0 0 auto;
+  }
+
+  img{
+    height: 160px;
+    width: 280px;
+  }
+}
+
+.scrolling-wrapper {
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrolling-wrapper {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+

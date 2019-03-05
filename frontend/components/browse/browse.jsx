@@ -67,7 +67,7 @@ class Browse extends React.Component {
     const euro = "Europe"
     const euroMovies = this.getMoviesByGenre("Europe");
     const euroPhotos = this.getPhotos(euroMovies);
-    console.log(allMovies);
+    console.log(euroPhotos);
     return (
       <>
         <div>{this.navBar()}</div>
