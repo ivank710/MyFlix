@@ -1,0 +1,36 @@
+.featured_vid{
+  position: relative;
+  height: 0px;
+  padding-bottom: 56.25%;
+  // display:flex;
+    
+  // z-index: 0;
+}
+
+.vid{
+  content:url('https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Piazza+dei+Miracoli_+Pisa_+Italy.mp4');
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+strong { 
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.worldflix-original{
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  font-size: 35px;
+}
+
+.title{
+  position: absolute;
+  top: 210px;
+  left: 50px;
+  font-size: 24px;
+}

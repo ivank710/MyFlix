@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import FeaturedMovie from './featured_movie';
 
 class Browse extends React.Component {
   constructor(props) {
@@ -9,7 +10,16 @@ class Browse extends React.Component {
     };
   }
 
-  render() {
+  componentDidMount() {
+    this.props.fetchMovies();
+    // const vid = document.getElementsByClassName(`${this.props.className}`);
+    // vid[0].play();
+  }
+
+  navBar(){
+    const email = this.props.currentUser.email;
+    const idx = email.indexOf("@");
+    const username = email.slice(0, idx);
 
     return (
       <>
@@ -24,18 +34,26 @@ class Browse extends React.Component {
               <i className="fa fa-caret-down"></i>
               
               <div className="dropdown-content">
-              <br/>
-                <div className="welcome">Hello!
-                
-                  <button className='sign_out_button' onClick={this.props.logout} type="submit">Sign out of Worldflix</button>
-               
-              </div>
+                <br/>
+                <div className="welcome">Hello, {username} </div>
+                <br/>
+                <button className='sign_out_button' onClick={this.props.logout} type="submit">Sign out of Worldflix</button>
+    
               </div>
             </div>
             
-          </div>
-          
-       
+        </div>
+      </>
+    )
+  }
+
+  render() {
+
+    return (
+      <>
+        <div>{this.navBar()}</div>
+
+        <FeaturedMovie movie={this.props.movies[0]} className={this.props.className} />
       </>
     )
   }

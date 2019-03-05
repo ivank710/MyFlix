@@ -1,13 +1,14 @@
 import {connect} from 'react-redux';
 import Browse from './browse';
+import {fetchMovies} from '../../actions/movies_actions'
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  //navLink: <Link to="/login"></Link>
-  //movies
+  movies: Object.values(state.entities.movies)
 });
 
 const mapDispatchToProps = dispatch => ({
+  fetchMovies: () => dispatch(fetchMovies()),
   logout: () => dispatch(logout())
 });
 

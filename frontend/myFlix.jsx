@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import {signup, login, logout} from './actions/session_actions'
+//test
+import {fetchMovie, fetchMovies} from './actions/movies_actions';
 
-window.signup = signup;
-window.login = login;
-window.logout = logout;
+window.fetchMovie = fetchMovie;
+window.fetchMovies = fetchMovies;
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
