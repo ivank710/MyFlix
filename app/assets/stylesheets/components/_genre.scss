@@ -34,6 +34,12 @@
 }
 
 .scrolling-wrapper{
+  height: 200px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.scrolling-wrapper{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -49,8 +55,8 @@
   img{
     height: 180px;
     width: 345px;
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
   }
 }
 
@@ -68,8 +74,8 @@
 .scrolling-wrapper {
   display: flex;
   flex-direction: row;
-  margin-top: 10px; //spaces b/t name and images
-  margin-bottom: 25px;
+  // margin-top: 10px; //spaces b/t name and images
+  // margin-bottom: 10px;
 
  
   &:hover {

@@ -9,7 +9,7 @@ class NavBar extends React.Component {
     const email = this.props.currUser.email;
     const idx = email.indexOf("@");
     const username = email.slice(0, idx);
-   
+   console.log(this.props.logout)
     return (
       <>
         <div className="nav_bar_container">

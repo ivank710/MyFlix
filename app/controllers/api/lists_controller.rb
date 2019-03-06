@@ -5,7 +5,7 @@ class Api::ListsController < ApplicationController
     @list.movie_id = params[:movie_id]
 
     if @list.save
-      render '/api/lists/index'
+      render :index
     else
       render :json ["Unable to create list"], status: 404
     end
