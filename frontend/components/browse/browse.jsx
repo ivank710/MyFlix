@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import FeaturedMovie from './featured_movie';
 import Genre from '../movies/genre';
+import NavBar from '../../components/navBar/navBar';
 
 class Browse extends React.Component {
   constructor(props) {
@@ -20,46 +21,46 @@ class Browse extends React.Component {
     return movies;
   }
 
-  navBar(){
-    const email = this.props.currentUser.email;
-    const idx = email.indexOf("@");
-    const username = email.slice(0, idx);
+  // navBar(){
+  //   const email = this.props.currentUser.email;
+  //   const idx = email.indexOf("@");
+  //   const username = email.slice(0, idx);
 
-    return (
-      <>
-        <div className="nav_bar_container">
-            <div className="nav_logo"></div>
+  //   return (
+  //     <>
+  //       <div className="nav_bar_container">
+  //           <div className="nav_logo"></div>
           
-            <div className="dropdown">
-              <button className="dropbtn">
-              </button>
-              &nbsp;&nbsp;&nbsp;  
+  //           <div className="dropdown">
+  //             <button className="dropbtn">
+  //             </button>
+  //             &nbsp;&nbsp;&nbsp;  
               
-              <i className="fa fa-caret-down"></i>
+  //             <i className="fa fa-caret-down"></i>
               
-              <div className="dropdown-content">
-                <br/>
-                <div className="welcome">Hello, {username} </div>
-                <br/>
-                <div className='sign_out_button' onClick={this.props.logout} type="submit">Sign out of Worldflix</div>
+  //             <div className="dropdown-content">
+  //               <br/>
+  //               <div className="welcome">Hello, {username} </div>
+  //               <br/>
+  //               <div className='sign_out_button' onClick={this.props.logout} type="submit">Sign out of Worldflix</div>
     
-              </div>
-            </div>
+  //             </div>
+  //           </div>
             
-        </div>
-      </>
-    )
-  }
+  //       </div>
+  //     </>
+  //   )
+  // }
 
   render() {
-    const euro = "Europe"
-    const asia = "Asia"
+    const euro = "Europe";
+    const asia = "Asia";
     const euroMovies = this.getMoviesByGenre("Europe");
     const asianMovies = this.getMoviesByGenre("Asia");
   
     return (
       <>
-        <div>{this.navBar()}</div>
+        <NavBar currUser={this.state.currentUser}/>
 
         <FeaturedMovie className="vid" />
         <br/>

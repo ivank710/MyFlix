@@ -7,6 +7,7 @@ import {ProtectedRoute} from '../util/route_util';
 import splash from './splash';
 import browse_container from '../components/browse/browse_container';
 import movie_show_container from '../components/movies/movie_show_container';
+import list_container from '../components/list/list_container';
 
 const App = () => (
   <div>   
@@ -16,6 +17,7 @@ const App = () => (
     <AuthRoute exact path="/signup" component={signup_form_container} />
     <ProtectedRoute exact path='/browse' component={browse_container} />
     <ProtectedRoute exact path='/browse/:movieId' component={movie_show_container} />
+    <ProtectedRoute exact path='/list/:listId' component={list_container} />
     <AuthRoute path="/" component={splash} />
   </Switch>
  
