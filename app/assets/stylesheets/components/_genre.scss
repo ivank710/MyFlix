@@ -8,12 +8,15 @@ $scale: 1.7;
 
 .scrolling-wrapper{
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   overflow-x: auto;
   padding-left: 20px;
 
   .image {
     flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
   }
 
   img{
@@ -32,13 +35,10 @@ $scale: 1.7;
   }
 }
 
-.genre{
-  padding-left: 20px;
-  font-size: 30px;
-}
 
 .scrolling-wrapper {
   display: flex;
+  flex-direction: row;
   margin-top: 10px; //spaces b/t name and images
   margin-bottom: 30px;
   
@@ -55,9 +55,8 @@ $scale: 1.7;
   .image {
     cursor: pointer;
     flex: 1 1 0px;
-    // transition: transform 300ms ease 100ms;
-    object-fit: cover;
-    transition: all .2s ease-in-out;
+    transition: transform 300ms ease 100ms;
+ 
     &:after {
       content: "";
       display: block;
@@ -67,11 +66,19 @@ $scale: 1.7;
       transform: scale(1.5);
       
       .play {
-			  opacity: 1;
+        opacity: 1;
 		  }
-
+      
     }
   }
+}
+
+
+
+
+.genre{
+  padding-left: 20px;
+  font-size: 30px;
 }
 
 .fa-play-circle{
