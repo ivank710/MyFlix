@@ -15,6 +15,10 @@ class Movie < ApplicationRecord
   validates :title, :description, :year, :genre, presence: true
   validates :title, uniqueness: true
 
+  has_many :lists,
+  foreign_key: :movie_id,
+  class_name: 'List'
+
   has_one_attached :video
   has_one_attached :photo
 end 

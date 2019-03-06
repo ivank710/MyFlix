@@ -4,7 +4,7 @@ class Api::MoviesController < ApplicationController
     if @movies
       render :index
     else
-      render :json ["Empty"], status: 404
+      render :json ["There are no movies"], status: 404
     end
   end
 
