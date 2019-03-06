@@ -15,8 +15,8 @@ class MovieShow extends React.Component{
     return (
       <>
         <div>
-          <div className="video">
-            <video src={this.props.movie.video} controls autoPlay />
+          <div className="video_box">
+            <video className="video" src={this.props.movie.video} controls autoPlay />
           </div>
         </div>
       </>

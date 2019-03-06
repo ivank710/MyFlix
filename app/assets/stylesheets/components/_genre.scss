@@ -3,7 +3,7 @@ $scale: 1.7;
 :root {
 	height: 140vh;
 	min-height: 400px;
-	background: #313131;
+	background: #111111;
 }
 
 .scrolling-wrapper{
@@ -22,6 +22,8 @@ $scale: 1.7;
   img{
     height: 180px;
     width: 345px;
+    padding-right: 5px;
+    padding-left: 5px;
   }
 }
 
@@ -82,81 +84,38 @@ $scale: 1.7;
 }
 
 .fa-play-circle{
-  color: #E40914;
-  
+  color: red;
+
+
 }
 
 .play {
   position: absolute;
 	opacity: 0;
   z-index: 10;
-  top: 50%;
-  left: 50%;
+  top: 70%;
+  left: 8%;
   transform: translateX(-50%) translateY(-50%);
   display: flex;
 	align-items: center;
 	justify-content: center;
   width: 8px;
   height: 15px;
-  background: rgba(black, .7); 
-  border-radius: 50%;
-  padding: 18px 20px 18px 28px;
-	transition: all .6s ease-in-out;
-	box-shadow: 0px 0px 10px rgba(black, .3);
-	
-	&::before {
-		content: "";
-  	position: absolute;
-  	z-index: 0;
- 	  left: 50%;
-  	top: 50%;
-  	transform: translateX(-50%) 		 translateY(-50%);
-  	display: block;
-  	width: 30px;
-  	height: 30px;
-  	background: rgba(black, .7);
-  	border-radius: 50%;
-  	animation: pulse-border 1500ms ease-out infinite;
-	}
-	
-	&::after {
-		content: "";
-  	position: absolute;
-  	z-index: 0;
-  	left: 50%;
-  	top: 50%;
-  	transform: translateX(-50%) translateY(-50%);
-  	display: block;
-  	width: 40px;
-  	height: 40px;
-  	background: black;
-  	border-radius: 50%;
-  	animation: pulse-border 1500ms ease-out infinite;
-	}
-	
-	span {
-		display: block;
-  	position: relative;
-  	z-index: 3;
-  	border-left: 23px solid #E82A4E;
-		border-top: 13px solid transparent;
-		position: relative;
-		left: -1px;
-		border-bottom: 13px solid transparent;
-	}
-}
+  background: rgba(white, .7); 
+  // border-radius: 50%;
+  // padding: 18px 20px 18px 28px;
+	// transition: all .6s ease-in-out;
+	// box-shadow: 0px 0px 10px rgba(black, .3);
 
 
-@keyframes pulse-border {
-  0% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-    opacity: 0;
-  }
 }
+
+.pics{
+ display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
 
 
 

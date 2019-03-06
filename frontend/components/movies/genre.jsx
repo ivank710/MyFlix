@@ -10,13 +10,14 @@ class Genre extends React.Component{
     let photos = this.props.movies.map((movie) => {
       return (
         <div className="image">
-          <img src={movie.photo} alt="" />
+       
           <Link to={`/browse/${movie.id}`}>
-            <div className="play">
-              <i className="far fa-play-circle fa-2x"></i>
-            </div>
+            <img src={movie.photo} alt="" />
+              <div className="play">
+                <i className="far fa-play-circle fa-2x"></i>
+              </div>
           </Link>
-          <br/>
+       
         </div>
       )
     });
@@ -28,8 +29,10 @@ class Genre extends React.Component{
         <div className="genre"><strong>{this.props.name}</strong></div>
 
         <div className="scrolling-wrapper">
-          
+          <div className="pics">
             {photos}
+          </div>
+            
      
         </div>
         

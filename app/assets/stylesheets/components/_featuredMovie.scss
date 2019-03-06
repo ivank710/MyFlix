@@ -2,13 +2,11 @@
   position: relative;
   height: 0px;
   padding-bottom: 56.25%;
-  // display:flex;
-    
-  // z-index: 0;
+  z-index: -1;
 }
 
 .vid{
-  content: url('https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Piazza+dei+Miracoli_+Pisa_+Italy.mp4');
+  // content: url('https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Piazza+dei+Miracoli_+Pisa_+Italy.mp4');
   position: absolute;
   top: 0px;
   left: 0px;
@@ -24,13 +22,59 @@ strong {
 .worldflix-original{
   position: absolute;
   top: 180px;
-  left: 50px;
+  left: 70px;
   font-size: 35px;
+  color: white;
+  margin: 10px;
 }
 
 .title{
+  color: white;
   position: absolute;
-  top: 210px;
-  left: 50px;
+  top: 250px;
+  left: 80px;
   font-size: 24px;
 }
+
+.play-button {
+  position: absolute;
+  top: 301px;
+  left: 79px;
+  color: white;
+  font-size: 20px;
+  font-weight: strong;
+  padding: 10px;
+  border-color: white;
+  border-radius: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.37);
+  height: 28px;
+  width: 133px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text{
+  color: white;
+  top: 370px;
+  position: absolute;
+  left: 79px;
+  size: 3px;
+  height: 100px;
+  width: 350px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

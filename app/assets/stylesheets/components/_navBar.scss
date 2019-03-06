@@ -1,13 +1,13 @@
 .nav_bar_container{
   padding: 15px;
   overflow: hidden;
-  background-color: rgba(black, .8); 
+  background-color: rgba(0, 0, 0, 0.4)
 }
 
 .nav_logo{
   position: absolute;
   top: 15px;
-  left: 45px;
+  left: 65px;
   background-image: url('worldFlix_edit.png');
   background-repeat: no-repeat;
   height: 50px;
@@ -21,16 +21,14 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-
 }
 
 .dropdown {
   float: right;
   overflow: hidden;
-  padding-right: 50px;
+  padding-right: 60px;
   color: white;
   cursor: pointer;
-
 }
 
 .dropbtn{
@@ -40,6 +38,7 @@
   width: 42px;
   border-color: #167F81;
   cursor: pointer;
+  
 }
 
 
@@ -48,10 +47,8 @@
   position: absolute;
   right: 62px;
   background-color: rgba(black, .8);
-  min-width: 140px;
-  height: 150px;
-  z-index: 1;
-
+  min-width: 150px;
+  height: 80px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -62,10 +59,9 @@
   display: flex;
   align-items: flex-start;
   font-family: sans-serif;
-  
-  font-size: 14px;
+  font-size: 15px;
   flex-direction: column;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 .sign_out{
@@ -75,9 +71,12 @@
 }
 
 .sign_out_button{
-  font-size: 14px;
+  font-size: 15px;
+  font-family: sans-serif;
   border-color: rgba(black, .2);
   background-color: rgba(black, .2);
+  padding-left: 5px;
+  padding-top: 7px;
 }
 
 .sign_out_button:hover {
