@@ -6,7 +6,6 @@
 }
 
 .vid{
-  // content: url('https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Piazza+dei+Miracoli_+Pisa_+Italy.mp4');
   position: absolute;
   top: 0px;
   left: 0px;
@@ -23,7 +22,7 @@ strong {
   position: absolute;
   top: 180px;
   left: 70px;
-  font-size: 35px;
+  font-size: 32px;
   color: white;
   margin: 10px;
 }
@@ -31,9 +30,9 @@ strong {
 .title{
   color: white;
   position: absolute;
-  top: 250px;
+  top: 230px;
   left: 80px;
-  font-size: 24px;
+  font-size: 58px;
 }
 
 .play-button {
@@ -64,6 +63,7 @@ strong {
   size: 3px;
   height: 100px;
   width: 350px;
+  font-size: 20px;
 }
 
 

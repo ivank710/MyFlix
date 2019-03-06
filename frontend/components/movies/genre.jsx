@@ -26,11 +26,14 @@ class Genre extends React.Component{
       <>
       <div className="genre_container">
    
-        <div className="genre"><strong>{this.props.name}</strong></div>
+        <div className="genre">{this.props.name}</div>
 
         <div className="scrolling-wrapper">
-          <div className="pics">
-            {photos}
+          <div className="right_arrow"></div>
+          <div className="pics_container">
+            <div className="pics">
+              {photos}
+            </div>
           </div>
             
      
