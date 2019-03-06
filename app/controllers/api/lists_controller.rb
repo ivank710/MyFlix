@@ -12,13 +12,10 @@ class Api::ListsController < ApplicationController
   end
 
   def index
-    @lists = List.all
+    @movies = current_user.movies
+    @lists = List.where(user_id: current_user.id)
 
-    if @lists
-      render :index
-    else
-      render :json ["Empty list"], status: 404
-    end
+    render :index
   end
 
   def destroy

@@ -7,3 +7,4 @@ class CreateLists < ActiveRecord::Migration[5.2]
     add_index :lists, :user_id, unique: true
   end
 end
+ 
