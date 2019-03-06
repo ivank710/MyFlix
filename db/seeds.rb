@@ -15,19 +15,19 @@ demo_user = User.create!(email: 'demo@gmail.com', password: '123456')
 
 piazza = Movie.create!(title: "Piazza dei Miracoli", description: "The Piazza dei Miracoli is located in Pisa, Tuscany, Italy. It is recognized as an important centre of European medieval art.", year: 2017, genre: "Europe")
 piazza_vid = open('https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Piazza+dei+Miracoli_+Pisa_+Italy.mp4')
-piazza_photo = File.open('app/assets/images/Piazza.jpg')
+piazza_photo = File.open('app/assets/images/piazza_img.jpg')
 piazza.video.attach(io: piazza_vid, filename: 'piazza-vid.mp4')
 piazza.photo.attach(io: piazza_photo, filename: 'piazza-photo.jpg')
 
 barcelona = Movie.create!(title: "Barcelona", description: "Barcelona, the cosmopolitan capital of Spain’s Catalonia region, is known for its art and architecture.", year: 2015, genre: "Europe")
 barcelona_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Barcelona_vid.mp4")
-barcelona_photo = File.open("app/assets/images/Barcelona.jpg")
+barcelona_photo = File.open("app/assets/images/barcelona_img.jpg")
 barcelona.video.attach(io: barcelona_vid, filename: "barcelona_vid.mp4")
 barcelona.photo.attach(io: barcelona_photo, filename: "barcelona_photo.jpg")
 
 london = Movie.create!(title: "London", description: "London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times.", year: 2016, genre: "Europe")
 london_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/London_vid.mp4")
-london_photo = File.open("app/assets/images/london.jpg")
+london_photo = File.open("app/assets/images/london_img.jpg")
 london.video.attach(io: london_vid, filename: "london_vid.mp4")
 london.photo.attach(io: london_photo, filename: "london_photo.mp4")
 
@@ -39,13 +39,13 @@ munich.photo.attach(io: munich_photo, filename: "munich_photo.mp4")
 
 paris = Movie.create!(title: "Paris", description: "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture.", year: 2017, genre: "Europe")
 paris_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Paris_vid.mp4")
-paris_photo = File.open("app/assets/images/paris.jpg")
+paris_photo = File.open("app/assets/images/paris_img.jpg")
 paris.video.attach(io: paris_vid, filename: "paris_vid.mp4")
 paris.photo.attach(io: paris_photo, filename: "paris_photo.mp4")
 
 rome = Movie.create!(title: "Rome", description: "Rome, Italy’s capital, is a sprawling, cosmopolitan city with nearly 3,000 years of globally influential art, architecture and culture on display.", year: 2015, genre: "Europe")
 rome_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Rome_vid.mp4")
-rome_photo = File.open("app/assets/images/Rome_Coliseum.jpg")
+rome_photo = File.open("app/assets/images/Coliseum.jpg")
 rome.video.attach(io: rome_vid, filename: "rome_vid.mp4")
 rome.photo.attach(io: rome_photo, filename: "rome_photo.mp4")
 
