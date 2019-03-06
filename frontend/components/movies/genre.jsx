@@ -1,61 +1,43 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-const Genre = (props) => {
-  let photos = props.photos.map((photo) => {
+class Genre extends React.Component{
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    let photos = this.props.movies.map((movie) => {
+      return (
+        <div className="image">
+          <img src={movie.photo} alt="" />
+          <Link to={`/browse/${movie.id}`}>
+            <div className="play">
+              <i className="far fa-play-circle fa-2x"></i>
+            </div>
+          </Link>
+        </div>
+      )
+    });
+
     return (
-      <div>
-        <img src={photo} alt="" />
-      </div>
-    )
-  });
-
-  
-
-  return(
-    <>
+      <>
       <div className="genre_container">
    
-        <div className="genre"><strong>{props.name}</strong></div>
-        <div className="scrolling-wrapper">
-          <div className="image">
-            <h2>{photos[1]}</h2>
-            <div className="play"><i class="far fa-play-circle fa-2x "></i></div>
-          </div>&nbsp;&nbsp;
-        
-          <div className="image">
-            <h2>{photos[3]}</h2>
-            <div className="play"><i class="far fa-play-circle fa-2x"></i></div>
-          </div>&nbsp;&nbsp;
-       
-          <div className="image">
-            <h2>{photos[5]}</h2>
-            <div className="play"><i class="far fa-play-circle fa-2x"></i></div>
-          </div>&nbsp;&nbsp;
-    
-          <div className="image">
-            <h2>{photos[0]}</h2>
-            <div className="play"><i class="far fa-play-circle fa-2x"></i></div>
-          </div>&nbsp;&nbsp;
-          
-          <div className="image">
-            <h2>{photos[2]}</h2>
-            <div className="play"><i class="far fa-play-circle fa-2x"></i></div>
-          </div>&nbsp;&nbsp;
-         
-          <div className="image">
-            <h2>{photos[4]}</h2>
-            <div className="play"><i class="far fa-play-circle fa-2x"></i></div>
-          </div>&nbsp;&nbsp;
-          
-          <div className="image">
-            <h2>{photos[6]}</h2>
-            <div className="play"><i class="far fa-play-circle fa-2x"></i></div>
-          </div>&nbsp;&nbsp;
-        </div>
+        <div className="genre"><strong>{this.props.name}</strong></div>
 
+        <div className="scrolling-wrapper">
+          <div>
+            {photos}
+          </div>
+        </div>
+        
       </div>
     </>
-  )
-};
+    )
+  }
 
-export default Genre
+}
+
+
+export default Genre;

@@ -50,13 +50,14 @@ $scale: 1.7;
   
   .image:hover ~ .image {
     transform: translateX(25%);
-    
   }
   
   .image {
     cursor: pointer;
     flex: 1 1 0px;
-    transition: transform 300ms ease 100ms;
+    // transition: transform 300ms ease 100ms;
+    object-fit: cover;
+    transition: all .2s ease-in-out;
     &:after {
       content: "";
       display: block;
@@ -75,7 +76,7 @@ $scale: 1.7;
 
 .fa-play-circle{
   color: #E40914;
-  background-color: #313131;
+  
 }
 
 .play {
@@ -88,9 +89,9 @@ $scale: 1.7;
   display: flex;
 	align-items: center;
 	justify-content: center;
-  width: 18px;
-  height: 30px;
-  background: #F9F9F9; 
+  width: 8px;
+  height: 15px;
+  background: rgba(black, .7); 
   border-radius: 50%;
   padding: 18px 20px 18px 28px;
 	transition: all .6s ease-in-out;
@@ -104,9 +105,9 @@ $scale: 1.7;
   	top: 50%;
   	transform: translateX(-50%) 		 translateY(-50%);
   	display: block;
-  	width: 60px;
-  	height: 60px;
-  	background: #F9F9F9;
+  	width: 30px;
+  	height: 30px;
+  	background: rgba(black, .7);
   	border-radius: 50%;
   	animation: pulse-border 1500ms ease-out infinite;
 	}
@@ -119,9 +120,9 @@ $scale: 1.7;
   	top: 50%;
   	transform: translateX(-50%) translateY(-50%);
   	display: block;
-  	width: 60px;
-  	height: 60px;
-  	background: #F9F9F9;
+  	width: 40px;
+  	height: 40px;
+  	background: black;
   	border-radius: 50%;
   	animation: pulse-border 1500ms ease-out infinite;
 	}
