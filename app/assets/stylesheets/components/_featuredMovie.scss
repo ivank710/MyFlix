@@ -2,10 +2,12 @@
   position: relative;
   height: 0px;
   padding-bottom: 56.25%;
-  z-index: -1;
+  z-index: -100;
+
 }
 
 .vid{
+  z-index: -500;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -47,14 +49,39 @@ strong {
   border-radius: 1px;
   cursor: pointer;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.37);
-  height: 28px;
-  width: 133px;
+  background-color: rgba(0, 0, 0, 0.45);
+  height: 25px;
+  width: 145px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &:hover{
+    background-color: white;
+    color: black;
+  }
+}
+
+.list-text{
+  position: absolute;
+    top: 300px;
+    left: 273px;
+    color: white;
+    font-size: 20px;
+    font-weight: strong;
+    padding: 10px;
+    border-color: white;
+    border-radius: 1px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.45);
+    height: 25px;
+    width: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
     background-color: white;
     color: black;
   }

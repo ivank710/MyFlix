@@ -18,7 +18,11 @@ const FeaturedMovie = (props) => (
           </span>
         </Link>
 
-        
+          <span className="list-button">
+            <div className="list-text">
+              + &nbsp;My List
+            </div>
+          </span>
 
       <div className="title">The Piazza dei Miracoli </div>
       <div className="description-box">

@@ -1,8 +1,12 @@
+
+
 .nav_bar_container{
   padding: 15px;
   overflow: hidden;
-  background-color: #141414;
+  background-color: rgba(black, -5);
+
 }
+
 
 .nav_logo{
   position: absolute;
@@ -13,6 +17,35 @@
   height: 50px;
   width: 170px;
 }
+
+.home {
+  cursor: pointer;
+  position: absolute;
+  top: 26px;
+  left: 241px;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+
+  &:hover{
+    color: grey;
+  }
+}
+
+.my-list-nav {
+  cursor: pointer;
+  position: absolute;
+  top: 26px;
+  left: 320px;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+
+  &:hover{
+    color: grey;
+  }
+}
+
 
 .nav_bar_container a {
   float: right;
@@ -26,15 +59,16 @@
 .dropdown {
   float: right;
   overflow: hidden;
-  padding-right: 60px;
+  padding-right: 10px;
   color: white;
   cursor: pointer;
+  z-index:1;
 }
 
 .dropbtn{
   background-image: url('profile_avatar_copy.png');
   background-repeat: no-repeat;
-  height: 40px;
+  height: 42px;
   width: 42px;
   border-color: #167F81;
   cursor: pointer;
@@ -45,14 +79,16 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 62px;
+  right: 83px;
   background-color: rgba(black, .8);
   min-width: 150px;
-  height: 85px;
+  height: 95px;
+  z-index: 7;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+ 
 }
 
 .welcome{
@@ -62,6 +98,15 @@
   font-size: 15px;
   flex-direction: column;
   padding-left: 5px;
+}
+
+hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid grey;
+    margin: 1em 0;
+    padding: 0;
 }
 
 .sign_out{
@@ -76,7 +121,6 @@
   border-color: rgba(black, .2);
   background-color: rgba(black, .2);
   padding-left: 5px;
-  padding-top: 7px;
 }
 
 .sign_out_button:hover {
