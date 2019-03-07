@@ -4,8 +4,7 @@ import {fetchMovies, fetchMovie} from '../../actions/movies_actions';
 import {createListItem} from '../../actions/list_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  movies: Object.values(state.entities.movies),
- 
+  movies: Object.values(ownProps.movies),
   currentUser: state.session.currentUser
 });
 

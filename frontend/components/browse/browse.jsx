@@ -24,9 +24,9 @@ class Browse extends React.Component {
   render() {
     const euro = "Europe";
     const asia = "Asia";
+    const recAdded = "Recently Added";
     const euroMovies = this.getMoviesByGenre("Europe");
     const asianMovies = this.getMoviesByGenre("Asia");
-    // console.log(this.props)
   
     return (
       <>
@@ -38,8 +38,8 @@ class Browse extends React.Component {
           <div>
             <FeaturedMovieContainer />
             <br/>
+            <GenreContainer name={recAdded} movies={this.props.movies}/>
             <GenreContainer name={asia} movies={asianMovies}/>
-            
             <GenreContainer name={euro} movies={euroMovies}/>
           </div>
         </div>
