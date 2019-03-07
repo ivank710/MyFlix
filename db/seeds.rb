@@ -57,7 +57,7 @@ venice.photo.attach(io: venice_photo, filename: "venice_photo.mp4")
 
 vietnam = Movie.create!(title: "Hội An", description: "Hội An is a city on Vietnam’s central coast known for its well-preserved Ancient Town, cut through with canals.", year: 2016, genre: "Asia")
 vietnam_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Ho%CC%A3%CC%82i+An+Ancient+Town%2C+Vietnam.mp4")
-vietnam_photo = File.open("app/assets/images/Hoi-an.jpg")
+vietnam_photo = File.open("app/assets/images/Hoi-An.jpg")
 vietnam.video.attach(io: vietnam_vid, filename: "vietnam_vid.mp4")
 vietnam.photo.attach(io: vietnam_photo, filename: "vietnam_photo.mp4")
 

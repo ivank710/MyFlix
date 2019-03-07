@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBarContainer from '../navBar/navBar_container';
 
 class List extends React.Component{
   constructor(props){
@@ -10,7 +11,11 @@ class List extends React.Component{
   }
 
   render() {
-
+    return (
+      <>  
+        <NavBarContainer  />
+      </>
+    )
   }
 
 }
