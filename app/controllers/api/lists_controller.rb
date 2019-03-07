@@ -24,7 +24,7 @@ class Api::ListsController < ApplicationController
     @list = List.find(params[:id])
     if @list.user_id === current_user.id
       @list.destroy
-      render :index
+      render 'api/lists/show'
     end
   end
 

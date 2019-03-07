@@ -15,7 +15,7 @@ export const fetchListItems = () => (
 
 export const deleteListItem = (id) => (
   $.ajax({
-    method: `destroy`,
+    method: `delete`,
     url: `/api/lists/${id}`
   })
 );

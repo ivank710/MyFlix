@@ -14,9 +14,9 @@ export const receiveListItem = (list_item) => ({
   list_item
 });
 
-export const removeListItem = (id) => ({
+export const removeListItem = movie => ({
   type: REMOVE_LIST_ITEM,
-  id
+  id: movie.id
 });
 
 export const fetchListItems = () => dispatch => {

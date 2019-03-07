@@ -12,4 +12,4 @@ const mapDispatchToProps = dispatch => ({
   fetchMovies: () => dispatch(fetchMovies())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Genre)
+export default connect(mapStateToProps, mapDispatchToProps)(Genre);

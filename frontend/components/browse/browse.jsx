@@ -21,37 +21,6 @@ class Browse extends React.Component {
     return movies;
   }
 
-  // navBar(){
-  //   const email = this.props.currentUser.email;
-  //   const idx = email.indexOf("@");
-  //   const username = email.slice(0, idx);
-
-  //   return (
-  //     <>
-  //       <div className="nav_bar_container">
-  //           <div className="nav_logo"></div>
-          
-  //           <div className="dropdown">
-  //             <button className="dropbtn">
-  //             </button>
-  //             &nbsp;&nbsp;&nbsp;  
-              
-  //             <i className="fa fa-caret-down"></i>
-              
-  //             <div className="dropdown-content">
-  //               <br/>
-  //               <div className="welcome">Hello, {username} </div>
-  //               <br/>
-  //               <div className='sign_out_button' onClick={this.props.logout} type="submit">Sign out of Worldflix</div>
-    
-  //             </div>
-  //           </div>
-            
-  //       </div>
-  //     </>
-  //   )
-  // }
-
   render() {
     const euro = "Europe";
     const asia = "Asia";
