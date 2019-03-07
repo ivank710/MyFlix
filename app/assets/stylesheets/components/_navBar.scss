@@ -12,7 +12,7 @@
   position: absolute;
   top: 15px;
   left: 65px;
-  background-image: url('worldFlix_edit.png');
+  background-image: image-url('worldFlix_edit.png');
   background-repeat: no-repeat;
   height: 50px;
   width: 170px;
@@ -66,7 +66,7 @@
 }
 
 .dropbtn{
-  background-image: url('profile_avatar_copy.png');
+  background-image: image-url('profile_avatar_copy.png');
   background-repeat: no-repeat;
   height: 42px;
   width: 42px;

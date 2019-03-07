@@ -4,6 +4,19 @@ import {Link} from 'react-router-dom';
 class Genre extends React.Component{
   constructor(props) {
     super(props);
+    this.state = {
+      user_id: this.props.currentUser.id,
+      movie_id: null
+    };
+
+    this.addListItem = this.addListItem.bind(this);
+  }
+
+  
+
+  addListItem(movieId) {
+    // e.preventDefault();
+    this.props.createListItem(movieId);
   }
 
   render() {
@@ -19,7 +32,7 @@ class Genre extends React.Component{
                 <div className="pic_title">{movie.title}</div>
                 <i className="far fa-play-circle fa-2x"></i>
                 &nbsp;&nbsp;
-                <i className="fas fa-plus fa-2x"></i>
+                <i className="fas fa-plus fa-2x" onClick={() => this.addListItem(movie.id)}></i>
               </div>
           </Link>
        

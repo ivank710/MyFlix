@@ -1,11 +1,11 @@
 class Api::ListsController < ApplicationController
   def create
-    @list = List.new(list_params)
+    @list = current_user.list.new(movie_id: params[:movieId])
     
     if @list.save
       render :show
     else
-      render json: ["Unable to create list item"], status: 404
+      render json: ["Unable to create list item"], status: 422
     end
   end
 
@@ -28,9 +28,6 @@ class Api::ListsController < ApplicationController
     end
   end
 
-  private
-  def list_params
-    params.require(:list).permit(:user_id, :movie_id)
-  end
+ 
   
 end

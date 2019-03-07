@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import FeaturedMovie from './featured_movie';
-import Genre from '../movies/genre';
+import FeaturedMovieContainer from './../browse/featured_movie_container';
+import GenreContainer from '../../components/movies/genre_container';
 import NavBarContainer from '../navBar/navBar_container';
 
 class Browse extends React.Component {
@@ -26,6 +26,7 @@ class Browse extends React.Component {
     const asia = "Asia";
     const euroMovies = this.getMoviesByGenre("Europe");
     const asianMovies = this.getMoviesByGenre("Asia");
+    // console.log(this.props)
   
     return (
       <>
@@ -35,11 +36,11 @@ class Browse extends React.Component {
           </div>
 
           <div>
-            <FeaturedMovie className="vid" />
+            <FeaturedMovieContainer />
             <br/>
-            <Genre name={asia} movies={asianMovies}/>
+            <GenreContainer name={asia} movies={asianMovies}/>
             
-            <Genre name={euro} movies={euroMovies}/>
+            <GenreContainer name={euro} movies={euroMovies}/>
           </div>
         </div>
        

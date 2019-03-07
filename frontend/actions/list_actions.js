@@ -24,8 +24,8 @@ export const fetchListItems = () => dispatch => {
   .then((payload) => dispatch(receiveListItems(payload)));
 };
 
-export const createListItem = (data) => dispatch => {
-  return ListUtil.createListItem(data)
+export const createListItem = (movieId) => dispatch => {
+  return ListUtil.createListItem(movieId)
   .then((item) => dispatch(receiveListItem(item)));
 };
 
