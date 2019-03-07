@@ -29,12 +29,19 @@ class Browse extends React.Component {
   
     return (
       <>
-        <NavBarContainer currUser={this.state.currentUser}/>
+        <div>
+          <div>
+            <NavBarContainer />
+          </div>
 
-        <FeaturedMovie className="vid" />
-        <br/>
-        <Genre name={asia} movies={asianMovies}/>
-        <Genre name={euro} movies={euroMovies}/>
+          <div>
+            <FeaturedMovie className="vid" />
+            <br/>
+            <Genre name={asia} movies={asianMovies}/>
+            
+            <Genre name={euro} movies={euroMovies}/>
+          </div>
+        </div>
        
       </>
     )

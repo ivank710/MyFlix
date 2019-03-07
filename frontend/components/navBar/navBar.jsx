@@ -3,11 +3,11 @@ import React from 'react';
 class NavBar extends React.Component {
   constructor(props){
     super(props);
-    
+
   }
 
   render(){
-    const email = this.props.currUser.email;
+    const email = this.props.currentUser.email;
     const idx = email.indexOf("@");
     const username = email.slice(0, idx);
     console.log(this.props)

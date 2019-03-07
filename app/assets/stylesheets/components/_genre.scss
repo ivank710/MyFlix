@@ -2,8 +2,12 @@
 	background: #141414;
 }
 
+.genre_container{
+  
+}
+
 .genre{
-  padding-left: 25px;
+  padding-left: 50px;
   font-size: 30px;
   color: white;
   font-family: sans-serif;
@@ -12,18 +16,30 @@
 
 .fa-play-circle{
   color: white;
+  padding-left: 30px;
 
   &:hover{
     color: red;
   }
 }
 
+.fa-plus{
+  color: white;
+  padding-left: 10px;
+  
+  &:hover{
+    color: red;
+  }
+}
+
+
+
 .play {
   position: absolute;
 	opacity: 0;
-  z-index: 10;
-  top: 70%;
-  left: 8%;
+  z-index: 5;
+  top: 60%;
+  left: 17%;
   transform: translateX(-50%) translateY(-50%);
   display: flex;
 	align-items: center;
@@ -31,12 +47,24 @@
   width: 8px;
   height: 15px;
   background: rgba(white, .7); 
+
+
+  .pic_title{
+    position: absolute;
+    top: 70%;
+    padding-top: 20px;
+    padding-left: 33px;
+    font-family: sans-serif;
+    font-size: 17px;
+  }
+  
 }
+
 
 .scrolling-wrapper{
   height: 200px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .scrolling-wrapper{
@@ -44,8 +72,10 @@
   flex-direction: row;
   flex-wrap: nowrap;
   overflow-x: auto;
-  padding-left: 20px;
+  padding-left: 50px;
   background: #141414;
+
+
   .image {
     flex: 0 0 auto;
     display: flex;
@@ -58,7 +88,9 @@
     padding-right: 3px;
     padding-left: 3px;
   }
+
 }
+
 
 .scrolling-wrapper {
   -webkit-overflow-scrolling: touch;

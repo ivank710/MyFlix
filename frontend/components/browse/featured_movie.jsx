@@ -17,6 +17,9 @@ const FeaturedMovie = (props) => (
             </div>
           </span>
         </Link>
+
+        
+
       <div className="title">The Piazza dei Miracoli </div>
       <div className="description-box">
         <div className="text">

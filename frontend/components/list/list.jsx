@@ -13,7 +13,10 @@ class List extends React.Component{
   render() {
     return (
       <>  
-        <NavBarContainer  />
+        <NavBarContainer />
+        <div className="my-list">
+          MY LIST
+        </div>
       </>
     )
   }

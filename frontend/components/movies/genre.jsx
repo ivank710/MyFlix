@@ -9,16 +9,22 @@ class Genre extends React.Component{
   render() {
     let photos = this.props.movies.map((movie) => {
       return (
+        <>
+        
         <div className="image">
        
           <Link to={`/browse/${movie.id}`}>
             <img src={movie.photo} alt="" />
               <div className="play">
+                <div className="pic_title">{movie.title}</div>
                 <i className="far fa-play-circle fa-2x"></i>
+                &nbsp;&nbsp;
+                <i className="fas fa-plus fa-2x"></i>
               </div>
           </Link>
        
         </div>
+        </>
       )
     });
 
