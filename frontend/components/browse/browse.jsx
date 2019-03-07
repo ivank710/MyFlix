@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import FeaturedMovie from './featured_movie';
 import Genre from '../movies/genre';
-import NavBar from '../../components/navBar/navBar';
+import NavBarContainer from '../navBar/navBar_container';
 
 class Browse extends React.Component {
   constructor(props) {
@@ -60,7 +60,7 @@ class Browse extends React.Component {
   
     return (
       <>
-        <NavBar currUser={this.state.currentUser}/>
+        <NavBarContainer currUser={this.state.currentUser}/>
 
         <FeaturedMovie className="vid" />
         <br/>

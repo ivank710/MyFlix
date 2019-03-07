@@ -4,11 +4,11 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 //test
-import {fetchMovie, fetchMovies} from './actions/movies_actions';
+import {fetchListItems, createListItem, deleteListItem} from './actions/list_actions';
 
-window.fetchMovie = fetchMovie;
-window.fetchMovies = fetchMovies;
-
+window.fetchItems = fetchListItems;
+window.createItem = createListItem;
+window.deleteItem = deleteListItem;
 
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -1,8 +1,8 @@
-export const createListItem = (list_item) => (
+export const createListItem = (list) => (
   $.ajax({
     method: `post`,
     url: `/api/lists`,
-    list_item
+    data: {list}
   })
 );
 
