@@ -30,7 +30,6 @@ class Genre extends React.Component{
               </div>
           </Link>
                 
-       
         </div>
         </>
       )
