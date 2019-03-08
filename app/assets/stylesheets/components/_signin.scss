@@ -141,11 +141,19 @@ input[type=submit]:focus {
   padding: 11px 18px;
   font-size: 22px;
   font-weight: 200;
+
+  &:hover{
+    cursor: pointer;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px white;
+  }
 }
 
-.session_submit:hover{
-  cursor: pointer;
-}
+// .session_submit:hover{
+//   cursor: pointer;
+// }
 
 .demo_submit{
   background-color: rgba(grey, 0.4);
@@ -155,11 +163,19 @@ input[type=submit]:focus {
   border-color: rgba(grey, 0.4);
   font-size: 22px;
   font-weight: 200;
+
+  &:hover{
+    cursor: pointer;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 5px 0px 20px white;
+  }
 }
 
-.demo_submit:hover{
-  cursor: pointer;
-}
+// .demo_submit:hover{
+//   cursor: pointer;
+// }
 
 .user_tag_parent{
   display: flex;

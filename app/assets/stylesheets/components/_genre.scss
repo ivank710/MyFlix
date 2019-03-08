@@ -4,7 +4,7 @@
 
 .genre{
   padding-left: 50px;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   font-family: sans-serif;
   font-weight: lighter;
@@ -63,7 +63,7 @@
 
 
 .scrolling-wrapper{
-  height: 200px;
+  height: 207px;
   padding-top: 35px;
   padding-bottom: 35px;
 }
@@ -149,6 +149,18 @@
   margin-right: 20px;
 }
 
+
+.fa-chevron-left:before {
+    content: "\f054";
+    color: white;
+    // position: absolute;
+    // top: 1000px;
+}
+
+.fa-chevron-right:before {
+    content: "\f054";
+    color: white;
+}
 
 
 //scroll buttons

@@ -42,11 +42,19 @@
   font-size: 18px;
   font-weight: lighter;
   border-color: #e10813;
+  outline: none;
+
+  &:hover{
+    cursor: pointer;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 7px 0px 20px white;
+    outline: none;
+  }
+
 }
 
-.sign_in_button:hover{
-  cursor: pointer;
-}
 
 .sign_up_button{
   background-color: #e10813;
@@ -59,11 +67,18 @@
   font-family: sans-serif;
   font-size: 32px;
   font-weight: lighter;
+  outline: none;
+
+  &:hover{
+    cursor: pointer;
+    -webkit-stroke-width: 7.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 5px 0px 20px white;
+    outline: none;
+  }
 }
 
-.sign_up_button:hover{
-  cursor: pointer;
-}
 
 .splash_container{
   position: absolute;

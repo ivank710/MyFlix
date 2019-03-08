@@ -34,19 +34,19 @@ class FeaturedMovie extends React.Component{
             </span>
           </Link>
 
-            <span className="list-button">
           <Link to={`/lists/${this.props.currentUser.id}`}>
+            <span className="list-button">
               <div className="list-text" onClick={this.addItem}>
                 + &nbsp;My List
               </div>
-          </Link>
             </span>
+          </Link>
 
           <div className="title">The Piazza dei Miracoli </div>
           <div className="description-box">
             <div className="text">
               The Piazza dei Miracoli, an important centre of European medieval art and one of the finest architectural complexes in the world.
-        </div>
+            </div>
           </div>
         </div>
       </>

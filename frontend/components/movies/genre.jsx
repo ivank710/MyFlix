@@ -17,14 +17,14 @@ class Genre extends React.Component{
   scrollLeft(event) {
     event.preventDefault();
     $('#photos').animate({
-      marginLeft: "+=400px"
+      marginLeft: "+=200px"
     }, "fast");
   }
 
   scrollRight(event) {
     event.preventDefault();
     $('#photos').animate({
-      marginLeft: "-=400px"
+      marginLeft: "-=200px"
     }, "fast");
   }
 
@@ -62,8 +62,8 @@ class Genre extends React.Component{
 
 
           <div className="pics_container">
-            <span id="controlL" class="left-controls" role="button" >
-              <b class="fa fa-chevron-left fa-chevron-left-extra" aria-hidden="true" onClick={this.scrollLeft}></b>
+            <span id="controlL" className="left-controls" role="button" >
+              <b className="fa fa-chevron-left fa-chevron-left-extra" aria-hidden="true" onClick={this.scrollLeft}></b>
             </span>
 
 
@@ -71,8 +71,8 @@ class Genre extends React.Component{
                 {photos}
             </div>
 
-            <span id="controlR" class="right-controls" role="button" >
-                <b class="fa fa-chevron-right fa-chevron-right-extra" aria-hidden="true" onClick={this.scrollRight}></b>
+            <span id="controlR" className="right-controls" role="button" >
+                <b className="fa fa-chevron-right fa-chevron-right-extra" aria-hidden="true" onClick={this.scrollRight}></b>
             </span>
           </div>
 
