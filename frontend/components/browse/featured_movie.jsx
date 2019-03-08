@@ -13,6 +13,7 @@ class FeaturedMovie extends React.Component{
 
   addItem(e) {
     e.preventDefault();
+    
     this.props.createListItem(this.state.movie_id);
   }
 
@@ -34,13 +35,13 @@ class FeaturedMovie extends React.Component{
             </span>
           </Link>
 
-          <Link to={`/lists/${this.props.currentUser.id}`}>
-            <span className="list-button">
-              <div className="list-text" onClick={this.addItem}>
-                + &nbsp;My List
-              </div>
-            </span>
-          </Link>
+            {/* <Link to={`/lists/${this.state.user_id}`}> */}
+              <span className="list-button" id="my-list">
+                <div className="list-text"  onClick={this.addItem}>
+                  + &nbsp;My List
+                </div>
+              </span>
+            {/* </Link> */}
 
           <div className="title">The Piazza dei Miracoli </div>
           <div className="description-box">

@@ -193,5 +193,13 @@ input[type=submit]:focus {
 
 .nav_link{
   font-weight: 300;
+
+  &:hover{
+    cursor: pointer;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px white;
+  }
 }
 
