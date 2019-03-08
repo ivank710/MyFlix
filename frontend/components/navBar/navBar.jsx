@@ -23,7 +23,7 @@ class NavBar extends React.Component {
               <div className="home">Home</div>
             </Link>
 
-            <Link to={`/lists/${this.props.currentUser.list}`}>
+            <Link to={`/lists/${this.props.currentUser.id}`}>
               <div className="my-list-nav">My List</div>
             </Link>
 

@@ -21,10 +21,16 @@ class Api::ListsController < ApplicationController
   end
 
   def destroy
-    @list = List.find(params[:id])
-    if @list.user_id === current_user.id
+    # debugger
+    # @list = List.find(params[:id])
+    @list = current_user.list.find_by(movie_id: params[:id])
+
+    # debugger
+    if @list
       @list.destroy
       render 'api/lists/show'
+    else
+      render json: "Not found", status: 404
     end
   end
 

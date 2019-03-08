@@ -9,14 +9,14 @@ export const receiveListItems = (payload) => ({
   payload
 });
 
-export const receiveListItem = (list_item) => ({
+export const receiveListItem = (movie) => ({
   type: RECEIVE_LIST_ITEM,
-  list_item
+  movie
 });
 
-export const removeListItem = movie => ({
+export const removeListItem = list => ({
   type: REMOVE_LIST_ITEM,
-  id: movie.id
+  id: list.movie_id
 });
 
 export const fetchListItems = () => dispatch => {
@@ -24,12 +24,17 @@ export const fetchListItems = () => dispatch => {
   .then((payload) => dispatch(receiveListItems(payload)));
 };
 
-export const createListItem = (movieId) => dispatch => {
+export const createListItem = (movieId) => (dispatch, getState) => {
   return ListUtil.createListItem(movieId)
-  .then((item) => dispatch(receiveListItem(item)));
+  .then((item) => {
+    const movie = getState().entities.movies[item.movie_id]
+    return dispatch(receiveListItem(movie));
+  })
 };
 
 export const deleteListItem = (id) => dispatch => {
   return ListUtil.deleteListItem(id)
-  .then((id) => dispatch(removeListItem(id)));
+    .then((list) => {
+      return dispatch(removeListItem(list));
+  });
 };

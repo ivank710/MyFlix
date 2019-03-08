@@ -4,10 +4,9 @@ const listsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_LIST_ITEMS:
-      return Object.assign({}, state, action.payload.lists);
+      return action.payload.movies;
     case RECEIVE_LIST_ITEM:
-   
-      return Object.assign({}, state, {[action.list_item.id]: action.list_item});
+      return Object.assign({}, state, {[action.movie.id]: action.movie});
     case REMOVE_LIST_ITEM:
       let newState = Object.assign({}, state, {});
       delete newState[action.id];
