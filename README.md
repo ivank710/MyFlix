@@ -1,5 +1,3 @@
-# README
-
 # WorldFlix
 
 ## Background and Overview
