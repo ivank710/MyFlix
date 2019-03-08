@@ -21,8 +21,6 @@ class List extends React.Component{
   }
 
   render() {
-    console.log(this.props.lists);
-
     let pics = this.props.lists.map((movie) => {
       return (
 
