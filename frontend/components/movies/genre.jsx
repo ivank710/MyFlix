@@ -24,10 +24,12 @@ class Genre extends React.Component{
               <div className="play">
                 <div className="pic_title">{movie.title}</div>
                 <i className="far fa-play-circle fa-2x"></i>
-                &nbsp;&nbsp;
+                <Link to={`/lists/${this.props.currentUser.id}`}>
+                  <i className="fas fa-plus fa-2x" onClick={() => this.addListItem(movie.id)}></i>
+                </Link>
               </div>
           </Link>
-                <i className="fas fa-plus fa-2x" onClick={() => this.addListItem(movie.id)}></i>
+                
        
         </div>
         </>

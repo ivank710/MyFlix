@@ -2,10 +2,6 @@
 	background: #141414;
 }
 
-.genre_container{
-  
-}
-
 .genre{
   padding-left: 50px;
   font-size: 30px;
@@ -19,6 +15,7 @@
   padding-left: 30px;
 
   &:hover{
+    cursor: pointer;
     color: red;
   }
 }
@@ -28,6 +25,7 @@
   padding-left: 10px;
   
   &:hover{
+    cursor: pointer;
     color: red;
   }
 }
@@ -74,8 +72,9 @@
   overflow-x: auto;
   padding-left: 50px;
   background: #141414;
+}
 
-
+  
   .image {
     flex: 0 0 auto;
     display: flex;
@@ -89,13 +88,12 @@
     padding-left: 3px;
     z-index: -5;
   }
+// }
 
-}
 
-
-.scrolling-wrapper {
-  -webkit-overflow-scrolling: touch;
-}
+// .scrolling-wrapper {
+//   -webkit-overflow-scrolling: touch;
+// }
 
 .scrolling-wrapper {
   &::-webkit-scrollbar {
@@ -122,9 +120,9 @@
   }
   
   .image {
-    cursor: pointer;
+    
     flex: 1 1 0px;
-    transition: transform 300ms ease 100ms;
+    transition: transform 400ms ease 100ms;
  
     &:after {
       content: "";

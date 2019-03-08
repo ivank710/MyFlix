@@ -16,7 +16,6 @@ const mapDispatchToProps = dispatch => ({
   processForm: (user) => dispatch(signup(user)),
   demoLogin: (user) => dispatch(login(user)),
   clearErrors: () => dispatch(clearSessionErrors()),
-
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SessionForm));

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class MovieShow extends React.Component{
   constructor(props) {
@@ -14,10 +15,18 @@ class MovieShow extends React.Component{
 
     return (
       <>
-        <div>
-          <div className="video_box">
-            <video className="video" src={this.props.movie.video} controls autoPlay />
-          </div>
+        <div className="video-wrapper">
+          <video className="video" 
+            src={this.props.movie.video} controls autoPlay></video>
+        </div>
+
+        <div className="back_container">
+          <Link to="/browse">
+              <div className="left-arrow">
+                <i class="fas fa-arrow-left fa-3x"></i>
+              </div>
+          </Link>
+  
         </div>
       </>
     )
