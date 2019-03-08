@@ -11,7 +11,7 @@
   font-family: sans-serif;
   font-size: 40px;
   font-weight: lighter;
-  padding-left: 68px;
+  padding-left: 72px;
 }
 
 .fa-minus-circle{
@@ -24,14 +24,14 @@
   }
 }
 
-.fa-minus-circle:before {
+#minus-circle:before {
     content: "\f056";
-    padding-left: 120px;
+    padding-left: 100px;
 }
 
-.fa-play-circle:before {
+#play-circle:before {
     content: "\f144";
-    padding-right: 130px;
+    padding-right: 100px;
     padding-left: 18px;
 }
 
@@ -55,6 +55,7 @@
   justify-content: center;
   font-size: 24px;
   font-family: sans-serif;
+  font-weight: lighter;
 }
 
 .list-scroll{
@@ -66,7 +67,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   overflow-x: auto;
-  padding-left: 50px;
+  padding-left: 72px;
   background: #141414;
 }
 

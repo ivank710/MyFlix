@@ -34,13 +34,13 @@ class FeaturedMovie extends React.Component{
             </span>
           </Link>
 
-          <Link to={`/lists/${this.props.currentUser.id}`}>
             <span className="list-button">
+          <Link to={`/lists/${this.props.currentUser.id}`}>
               <div className="list-text" onClick={this.addItem}>
                 + &nbsp;My List
               </div>
-            </span>
           </Link>
+            </span>
 
           <div className="title">The Piazza dei Miracoli </div>
           <div className="description-box">

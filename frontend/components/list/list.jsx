@@ -34,7 +34,7 @@ class List extends React.Component{
               <div className="controls">
               <i className="far fa-play-circle fa-2x" id="play-circle"></i>
               <Link to={`/lists/${this.props.currentUser.id}`}>
-                <i className="fas fa-minus-circle fa-2x" onClick={() => this.removeListItem(movie.id)}></i>
+                <i className="fas fa-minus-circle fa-2x" id="minus-circle" onClick={() => this.removeListItem(movie.id)}></i>
               </Link>
             </div>
           </Link>

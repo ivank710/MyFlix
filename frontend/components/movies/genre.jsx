@@ -23,9 +23,9 @@ class Genre extends React.Component{
             <img src={movie.photo} alt="" />
               <div className="play">
                 <div className="pic_title">{movie.title}</div>
-                <i className="far fa-play-circle fa-2x"></i>
+                <i className="far fa-play-circle fa-2x" id="play-genre"></i>
                 <Link to={`/lists/${this.props.currentUser.id}`}>
-                  <i className="fas fa-plus fa-2x" onClick={() => this.addListItem(movie.id)}></i>
+                  <i className="fas fa-plus fa-2x" id="add-circle" onClick={() => this.addListItem(movie.id)}></i>
                 </Link>
               </div>
           </Link>

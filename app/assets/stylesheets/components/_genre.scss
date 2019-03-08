@@ -10,9 +10,13 @@
   font-weight: lighter;
 }
 
+
+
+
 .fa-play-circle{
   color: white;
   padding-left: 30px;
+  padding-right: 20px;
 
   &:hover{
     cursor: pointer;
@@ -23,7 +27,6 @@
 .fa-plus{
   color: white;
   padding-left: 10px;
-  
   &:hover{
     cursor: pointer;
     color: red;
@@ -37,7 +40,7 @@
 	opacity: 0;
   z-index: 5;
   top: 60%;
-  left: 17%;
+  left: 20%;
   transform: translateX(-50%) translateY(-50%);
   display: flex;
 	align-items: center;
@@ -49,7 +52,7 @@
 
   .pic_title{
     position: absolute;
-    top: 70%;
+    top: 55%;
     padding-top: 20px;
     padding-left: 33px;
     font-family: sans-serif;
