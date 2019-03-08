@@ -6,11 +6,28 @@ class Genre extends React.Component{
     super(props);
 
     this.addListItem = this.addListItem.bind(this);
+    this.scrollLeft = this.scrollLeft.bind(this);
+    this.scrollRight = this.scrollRight.bind(this);
   }
 
   addListItem(movieId) {
     this.props.createListItem(movieId);
   }
+
+  scrollLeft(event) {
+    event.preventDefault();
+    $('#photos').animate({
+      marginLeft: "+=400px"
+    }, "fast");
+  }
+
+  scrollRight(event) {
+    event.preventDefault();
+    $('#photos').animate({
+      marginLeft: "-=400px"
+    }, "fast");
+  }
+
 
   render() {
     let photos = this.props.movies.map((movie) => {
@@ -42,14 +59,23 @@ class Genre extends React.Component{
         <div className="genre">{this.props.name}</div>
 
         <div className="scrolling-wrapper">
-          <div className="right_arrow"></div>
+
+
           <div className="pics_container">
-            <div className="pics">
-              {photos}
+            <span id="controlL" class="left-controls" role="button" >
+              <b class="fa fa-chevron-left fa-chevron-left-extra" aria-hidden="true" onClick={this.scrollLeft}></b>
+            </span>
+
+
+            <div className="pics" id="photos">
+                {photos}
             </div>
+
+            <span id="controlR" class="right-controls" role="button" >
+                <b class="fa fa-chevron-right fa-chevron-right-extra" aria-hidden="true" onClick={this.scrollRight}></b>
+            </span>
           </div>
-            
-     
+
         </div>
         
       </div>

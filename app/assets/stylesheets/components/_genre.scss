@@ -151,8 +151,109 @@
 
 
 
+//scroll buttons
 
+// button:focus {outline:0 !important;}
 
+// .left-controls{
+  
+//   position:absolute;
+//   top:896px;
+//   left:0;
+//   width:4%;
+//   height:100px;
+//   z-index:40;
+//   background:rgba(black, .1);
+//   opacity:1;
+//   cursor:pointer;
+//   text-align:center;
+//   -webkit-justify-content: center;
+//   justify-content:center;
+//   display: webkit box;
+//   display: webkit flex;
+//   display: moz box;
+//   display:ms flexbox;
+//   display:flex;
+  
+
+// }
+
+// .fa-chevron-left:before {
+//     content: "\f053";
+//     position: absolute;
+//     top: 232px;
+// }
+
+// .fa-chevron-left-extra
+// {
+//   align-self:center;
+//   position:relative;
+//   height:auto;
+//   top:-250px;
+//   transform-origin: 55% 50%;
+//   font-style:normal;
+//   font-weight:400;
+//   line-height:1;
+//   font-variant:normal;
+//   text-transform:none;
+//   font-size:2.5vw;
+//   transition:transform .1s ease-out 0s;
+//   transition-property: transform;
+//   transition-duration: 0.1s;
+//   transition-timing-function: ease-out;
+//   transition-delay: 0s;
+//   color:red;
+//   opacity:.1;
+// }
+
+// .right-controls{
+//   position:absolute;
+//   top:896px;
+//   right:0;
+//   width:4%;
+//   height:100px;
+//   z-index:40;
+//   background: rgba(black, .1);
+//   opacity:1;
+//   cursor:pointer;
+//   text-align:center;
+//   -webkit-justify-content: center;
+//   justify-content:center;
+//   display: webkit box;
+//   display: webkit flex;
+//   display: moz box;
+//   display:ms flexbox;
+//   display:flex;
+//   color:#fff;
+// }
+
+// .fa-chevron-right:before {
+//     content: "\f053";
+//     position: absolute;
+//     top: 232px;
+// }
+
+// .fa-chevron-right-extra
+// {
+//   align-self:center;
+//   position:relative;
+//   height:auto;
+//   top:-250px;
+//  transform-origin: 55% 50%;
+//   font-style:normal;
+//   font-weight:400;
+//   line-height:1;
+//   font-variant:normal;
+//   text-transform:none;
+//   font-size:2.5vw;
+//   transition:transform .1s ease-out 0s;
+//   transition-property: transform;
+//   transition-duration: 0.1s;
+//   transition-timing-function: ease-out;
+//   transition-delay: 0s;
+//   color:red;
+//   opacity:.1;
+// }
 
 
 
