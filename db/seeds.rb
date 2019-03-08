@@ -13,6 +13,26 @@ Movie.destroy_all
 my_user = User.create!(email: 'ivan@gmail.com', password: '123456')
 demo_user = User.create!(email: 'demo@gmail.com', password: '123456')
 
+#EUROPE
+
+paris = Movie.create!(title: "Paris", description: "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture.", year: 2017, genre: "Europe")
+paris_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Paris_vid.mp4")
+paris_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/paris_img.jpg")
+paris.video.attach(io: paris_vid, filename: "paris_vid.mp4")
+paris.photo.attach(io: paris_photo, filename: "paris_photo.mp4")
+
+rome = Movie.create!(title: "Rome", description: "Rome, Italy’s capital, is a sprawling, cosmopolitan city with nearly 3,000 years of globally influential art, architecture and culture on display.", year: 2015, genre: "Europe")
+rome_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Rome_vid.mp4")
+rome_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/Coliseum.jpg")
+rome.video.attach(io: rome_vid, filename: "rome_vid.mp4")
+rome.photo.attach(io: rome_photo, filename: "rome_photo.mp4")
+
+venice = Movie.create!(title: "Venice", description: "Venice, the capital of northern Italy’s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea.", year: 2018, genre: "Europe")
+venice_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Venice_+Italy.mp4")
+venice_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/Venice.jpg")
+venice.video.attach(io: venice_vid, filename: "venice_vid.mp4")
+venice.photo.attach(io: venice_photo, filename: "venice_photo.mp4")
+
 piazza = Movie.create!(title: "Piazza dei Miracoli", description: "The Piazza dei Miracoli is located in Pisa, Tuscany, Italy. It is recognized as an important centre of European medieval art.", year: 2017, genre: "Europe")
 piazza_vid = open('https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Piazza+dei+Miracoli_+Pisa_+Italy.mp4')
 piazza_photo = open('https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/piazza_img.jpg')
@@ -37,41 +57,13 @@ munich_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/mun
 munich.video.attach(io: munich_vid, filename: "munich_vid.mp4")
 munich.photo.attach(io: munich_photo, filename: "munich_photo.mp4")
 
-paris = Movie.create!(title: "Paris", description: "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture.", year: 2017, genre: "Europe")
-paris_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Paris_vid.mp4")
-paris_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/paris_img.jpg")
-paris.video.attach(io: paris_vid, filename: "paris_vid.mp4")
-paris.photo.attach(io: paris_photo, filename: "paris_photo.mp4")
-
-rome = Movie.create!(title: "Rome", description: "Rome, Italy’s capital, is a sprawling, cosmopolitan city with nearly 3,000 years of globally influential art, architecture and culture on display.", year: 2015, genre: "Europe")
-rome_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Rome_vid.mp4")
-rome_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/Coliseum.jpg")
-rome.video.attach(io: rome_vid, filename: "rome_vid.mp4")
-rome.photo.attach(io: rome_photo, filename: "rome_photo.mp4")
-
-venice = Movie.create!(title: "Venice", description: "Venice, the capital of northern Italy’s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea.", year: 2018, genre: "Europe")
-venice_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Venice_+Italy.mp4")
-venice_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/Venice.jpg")
-venice.video.attach(io: venice_vid, filename: "venice_vid.mp4")
-venice.photo.attach(io: venice_photo, filename: "venice_photo.mp4")
-
-vietnam = Movie.create!(title: "Hội An", description: "Hội An is a city on Vietnam’s central coast known for its well-preserved Ancient Town, cut through with canals.", year: 2016, genre: "Asia")
-vietnam_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Ho%CC%A3%CC%82i+An+Ancient+Town%2C+Vietnam.mp4")
-vietnam_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/Hoi-An.jpg")
-vietnam.video.attach(io: vietnam_vid, filename: "vietnam_vid.mp4")
-vietnam.photo.attach(io: vietnam_photo, filename: "vietnam_photo.mp4")
+#ASIA
 
 myanmar = Movie.create!(title: "Shwedagon Pagoda", description: "The Shwedagon Pagoda, officially named Shwedagon Zedi Daw, is a gilded stupa located in Yangon, Myanmar.", year: 2015, genre: "Asia")
 myanmar_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Shwedagon+Pagoda%2C+Myanmar.mp4")
 myanmar_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/shwedagon-pagoda.jpg")
 myanmar.video.attach(io: myanmar_vid, filename: "myanmar_vid.mp4")
 myanmar.photo.attach(io: myanmar_photo, filename: "myanmar_photo.mp4")
-
-seoul = Movie.create!(title: "Seoul", description: "Seoul, the capital of South Korea, is a huge metropolis where modern skyscrapers, and pop culture meet Buddhist temples, palaces and street markets.", year: 2017, genre: "Asia")
-seoul_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/seoul.mp4")
-seoul_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/seoul.jpg")
-seoul.video.attach(io: seoul_vid, filename: "seoul_vid.mp4")
-seoul.photo.attach(io: seoul_photo, filename: "seoul_photo.mp4")
 
 singapore = Movie.create!(title: "Singapore", description: "Singapore, an island city-state off southern Malaysia, is a global financial center with a tropical climate and multicultural population.", year: 2018, genre: "Asia")
 singapore_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/singapore.mp4")
@@ -91,11 +83,22 @@ thailand_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/t
 thailand.video.attach(io: thailand_vid, filename: "thailand_vid.mp4")
 thailand.photo.attach(io: thailand_photo, filename: "thailand_photo.mp4")
 
+seoul = Movie.create!(title: "Seoul", description: "Seoul, the capital of South Korea, is a huge metropolis where modern skyscrapers, and pop culture meet Buddhist temples, palaces and street markets.", year: 2017, genre: "Asia")
+seoul_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/seoul.mp4")
+seoul_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/seoul.jpg")
+seoul.video.attach(io: seoul_vid, filename: "seoul_vid.mp4")
+seoul.photo.attach(io: seoul_photo, filename: "seoul_photo.mp4")
+
 tokyo = Movie.create!(title: "Tokyo", description: "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples.", year: 2014, genre: "Asia")
 tokyo_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/tokyo_vid.mp4")
 tokyo_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/tokyo.jpg")
 tokyo.video.attach(io: tokyo_vid, filename: "tokyo_vid.mp4")
 tokyo.photo.attach(io: tokyo_photo, filename: "tokyo_photo.mp4")
 
+vietnam = Movie.create!(title: "Hội An", description: "Hội An is a city on Vietnam’s central coast known for its well-preserved Ancient Town, cut through with canals.", year: 2016, genre: "Asia")
+vietnam_vid = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Vids/Ho%CC%A3%CC%82i+An+Ancient+Town%2C+Vietnam.mp4")
+vietnam_photo = open("https://s3-us-west-1.amazonaws.com/worldflix-dev/Photos/Hoi-An.jpg")
+vietnam.video.attach(io: vietnam_vid, filename: "vietnam_vid.mp4")
+vietnam.photo.attach(io: vietnam_photo, filename: "vietnam_photo.mp4")
 
 
