@@ -26,6 +26,9 @@ WorldFlix is built on a Ruby on Rails backend with a React/Redux front end. The 
 Users can watch the previewed video and/or browse other videos to watch as well as add videos to their list.
 
 <img width="1659" alt="Screen Shot 2019-03-10 at 9 35 53 PM" src="https://user-images.githubusercontent.com/42259148/54101010-99fdd400-437e-11e9-8d68-d8bbf98f7414.png">
+
+Users can scroll(horizontally) through the genres on a trackpad.
+
 <img width="1656" alt="Screen Shot 2019-03-10 at 9 36 30 PM" src="https://user-images.githubusercontent.com/42259148/54101041-b0a42b00-437e-11e9-8d8e-4e73c87ca5d0.png">
 
 ### List Page
