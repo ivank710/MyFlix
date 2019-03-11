@@ -27,7 +27,7 @@ Users can watch the previewed video and/or browse other videos.
 
 <img width="1659" alt="Screen Shot 2019-03-10 at 9 35 53 PM" src="https://user-images.githubusercontent.com/42259148/54101010-99fdd400-437e-11e9-8d68-d8bbf98f7414.png">
 
-Users can scroll(horizontally) through the genres on a trackpad and hover over each image to play or add.
+Users can scroll(horizontally) through the genres on a trackpad and hover over each image to play or add to their list.
 
 <img width="1654" alt="Screen Shot 2019-03-10 at 10 03 47 PM" src="https://user-images.githubusercontent.com/42259148/54101361-7c316e80-4380-11e9-934d-e9b9edd0179c.png">
 
