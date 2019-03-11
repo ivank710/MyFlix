@@ -36,3 +36,8 @@ Users can scroll(horizontally) through the genres on a trackpad and hover over e
 Users can view their list of videos and/or delete videos from their list.
 
 <img width="1676" alt="Screen Shot 2019-03-10 at 9 37 33 PM" src="https://user-images.githubusercontent.com/42259148/54101067-ce719000-437e-11e9-890e-6ee5c8895f7d.png">
+
+### Coming Soon
+
+* Search functionality
+* Drop down info upon hovering on each image
