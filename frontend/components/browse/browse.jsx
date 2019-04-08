@@ -16,17 +16,10 @@ class Browse extends React.Component {
     this.props.fetchMovies();
   }
 
-  getMoviesByGenre(genre) {
-    const movies = this.props.movies.filter(movie => movie.genre === genre);
-    return movies;
-  }
-
   render() {
     const euro = "Europe";
     const asia = "Asia";
     const recAdded = "Recently Added";
-    const euroMovies = this.getMoviesByGenre("Europe");
-    const asianMovies = this.getMoviesByGenre("Asia");
   
     return (
       <>
@@ -39,8 +32,8 @@ class Browse extends React.Component {
             <FeaturedMovieContainer />
             <br/>
             <GenreContainer name={recAdded} movies={this.props.movies}/>
-            <GenreContainer name={asia} movies={asianMovies}/>
-            <GenreContainer name={euro} movies={euroMovies}/>
+            <GenreContainer name={asia} movies={this.props.movies.filter(movie => movie.genre === "Asia")}/>
+            <GenreContainer name={euro} movies={this.props.movies.filter(movie => movie.genre === "Europe")}/>
           </div>
         </div>
        

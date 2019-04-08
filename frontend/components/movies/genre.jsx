@@ -6,8 +6,10 @@ class Genre extends React.Component{
     super(props);
 
     this.addListItem = this.addListItem.bind(this);
+    
     this.scrollLeft = this.scrollLeft.bind(this);
     this.scrollRight = this.scrollRight.bind(this);
+
   }
 
   addListItem(movieId) {
@@ -16,71 +18,65 @@ class Genre extends React.Component{
 
   scrollLeft(event) {
     event.preventDefault();
-    $('#photos').animate({
-      marginLeft: "+=200px"
+    $('.pics').animate({
+      marginLeft: "+=300px"
     }, "fast");
   }
 
   scrollRight(event) {
     event.preventDefault();
-    $('#photos').animate({
-      marginLeft: "-=200px"
-    }, "fast");
+    $(".pics").animate(
+      {
+        marginLeft: "-=300px"
+      },
+      "fast"
+    );
   }
 
 
   render() {
-    let photos = this.props.movies.map((movie) => {
+    let photos = this.props.movies.map(movie => {
       return (
         <>
-        
-        <div className="image">
-       
-          <Link to={`/browse/${movie.id}`}>
-            <img src={movie.photo} alt="" />
+          <div className="image">
+            <Link to={`/browse/${movie.id}`}>
+              <img src={movie.photo} alt="" />
               <div className="play">
                 <div className="pic_title">{movie.title}</div>
-                <i className="far fa-play-circle fa-2x" id="play-genre"></i>
+                <i className="far fa-play-circle fa-2x" id="play-genre" />
                 <Link to={`/lists/${this.props.currentUser.id}`}>
-                  <i className="fas fa-plus fa-2x" id="add-circle" onClick={() => this.addListItem(movie.id)}></i>
+                  <i
+                    className="fas fa-plus fa-2x"
+                    id="add-circle"
+                    onClick={() => this.addListItem(movie.id)}
+                  />
                 </Link>
               </div>
-          </Link>
-                
-        </div>
+            </Link>
+          </div>
         </>
-      )
+      );
     });
 
     return (
       <>
-      <div className="genre_container">
-   
-        <div className="genre">{this.props.name}</div>
-
-        <div className="scrolling-wrapper">
-
-
-          <div className="pics_container">
-            <span id="controlL" className="left-controls" role="button" >
-              <b className="fa fa-chevron-left fa-chevron-left-extra" aria-hidden="true" onClick={this.scrollLeft}></b>
-            </span>
-
-
-            <div className="pics" id="photos">
+        <div className="genre_container">
+          <div className="genre">{this.props.name}</div>
+          
+          <div className="scrolling-wrapper">
+       
+            <div className="arrow"><i id="left-arrow" class="fas fa-chevron-left" onClick={this.scrollLeft}></i></div>
+              <div className="pics" id="photos">
                 {photos}
-            </div>
-
-            <span id="controlR" className="right-controls" role="button" >
-                <b className="fa fa-chevron-right fa-chevron-right-extra" aria-hidden="true" onClick={this.scrollRight}></b>
-            </span>
+              </div>
+            <div className="arrow"><i id="right-arrow" class="fas fa-chevron-right" onClick={this.scrollRight}></i></div>
+            
           </div>
 
-        </div>
         
-      </div>
-    </>
-    )
+        </div>
+      </>
+    );
   }
 
 }

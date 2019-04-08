@@ -6,7 +6,7 @@ class FeaturedMovie extends React.Component{
     super(props);
     this.state = {
       user_id: this.props.currentUser.id,
-      movie_id: 1
+      movie_id: 4
     };
     this.addItem = this.addItem.bind(this);
   }
@@ -27,7 +27,7 @@ class FeaturedMovie extends React.Component{
 
         <div className="vid-header">
           <div className="worldflix-original"> <strong>WORLDFLIX</strong> ORIGINAL</div>
-          <Link to="/browse/1">
+          <Link to="/browse/4">
             <span className="play-button">
               <div className="play-text">
                 ▶ &nbsp;Play
@@ -36,8 +36,8 @@ class FeaturedMovie extends React.Component{
           </Link>
 
             {/* <Link to={`/lists/${this.state.user_id}`}> */}
-              <span className="list-button" id="my-list">
-                <div className="list-text"  onClick={this.addItem}>
+          <span className="list-button" id="my-list" onClick={this.addItem}>
+                <div className="list-text"  >
                   + &nbsp;My List
                 </div>
               </span>
