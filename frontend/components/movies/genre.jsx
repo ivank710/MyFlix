@@ -7,8 +7,10 @@ class Genre extends React.Component{
 
     this.addListItem = this.addListItem.bind(this);
     
-    this.scrollLeft = this.scrollLeft.bind(this);
-    this.scrollRight = this.scrollRight.bind(this);
+    // this.scrollLeft = this.scrollLeft.bind(this);
+    // this.scrollRight = this.scrollRight.bind(this);
+
+    this.scroll = this.scroll.bind(this);
 
   }
 
@@ -16,21 +18,44 @@ class Genre extends React.Component{
     this.props.createListItem(movieId);
   }
 
-  scrollLeft(event) {
-    event.preventDefault();
-    $('.pics').animate({
-      marginLeft: "+=300px"
-    }, "fast");
-  }
+  // scrollLeft(event) {
+  //   event.preventDefault();
+  //   $('.pics').animate({
+  //     marginLeft: "+=300px"
+  //   }, "fast");
+  // }
 
-  scrollRight(event) {
+  // scrollRight(event) {
+  //   event.preventDefault();
+  //   $(".pics").animate(
+  //     {
+  //       marginLeft: "-=300px"
+  //     },
+  //     "fast"
+  //   );
+  // }
+
+  scroll(event) {
     event.preventDefault();
-    $(".pics").animate(
-      {
-        marginLeft: "-=300px"
-      },
-      "fast"
-    );
+
+    let $item = $('.image'), //Cache your DOM selector
+      visible = 2, //Set the number of items that will be visible
+      index = 0, //Starting index
+      endIndex = ($item.length / visible) - 1; //End index (NOTE:: Requires visible to be a factor of $item.length... You can improve this by rounding...)
+
+    $('#right-arrow').click(function () {
+      if (index < endIndex) {
+        index++;
+        $item.animate({ 'left': '-=300px' });
+      }
+    });
+
+    $('#left-arrow').click(function () {
+      if (index > 0) {
+        index--;
+        $item.animate({ 'left': '+=300px' });
+      }
+    });
   }
 
 
@@ -38,7 +63,7 @@ class Genre extends React.Component{
     let photos = this.props.movies.map(movie => {
       return (
         <>
-          <div className="image">
+          <div className="image" key={movie.title}>
             <Link to={`/browse/${movie.id}`}>
               <img src={movie.photo} alt="" />
               <div className="play">
@@ -62,18 +87,18 @@ class Genre extends React.Component{
       <>
         <div className="genre_container">
           <div className="genre">{this.props.name}</div>
-          
-          <div className="scrolling-wrapper">
-       
-            <div className="arrow"><i id="left-arrow" class="fas fa-chevron-left" onClick={this.scrollLeft}></i></div>
-              <div className="pics" id="photos">
-                {photos}
-              </div>
-            <div className="arrow"><i id="right-arrow" class="fas fa-chevron-right" onClick={this.scrollRight}></i></div>
-            
-          </div>
 
-        
+          <div className="scrolling-wrapper">
+            <div className="arrow" onClick={this.scroll}>
+              <i id="left-arrow" className="fas fa-chevron-left" />
+            </div>
+            <div className="pics" id="photos">
+              {photos}
+            </div>
+            <div className="arrow" onClick={this.scroll}>
+              <i id="right-arrow" className="fas fa-chevron-right" />
+            </div>
+          </div>
         </div>
       </>
     );
