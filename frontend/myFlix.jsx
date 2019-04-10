@@ -5,10 +5,12 @@ import Root from './components/root';
 
 //test
 import {fetchListItems, createListItem, deleteListItem} from './actions/list_actions';
+import {logout} from './actions/session_actions'
 
 window.fetchItems = fetchListItems;
 window.createItem = createListItem;
 window.deleteItem = deleteListItem;
+window.logout = logout;
 
 
 document.addEventListener("DOMContentLoaded", () => {

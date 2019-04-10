@@ -6,9 +6,6 @@ class Genre extends React.Component{
     super(props);
 
     this.addListItem = this.addListItem.bind(this);
-    
-    // this.scrollLeft = this.scrollLeft.bind(this);
-    // this.scrollRight = this.scrollRight.bind(this);
 
     this.scroll = this.scroll.bind(this);
 
@@ -17,23 +14,6 @@ class Genre extends React.Component{
   addListItem(movieId) {
     this.props.createListItem(movieId);
   }
-
-  // scrollLeft(event) {
-  //   event.preventDefault();
-  //   $('.pics').animate({
-  //     marginLeft: "+=300px"
-  //   }, "fast");
-  // }
-
-  // scrollRight(event) {
-  //   event.preventDefault();
-  //   $(".pics").animate(
-  //     {
-  //       marginLeft: "-=300px"
-  //     },
-  //     "fast"
-  //   );
-  // }
 
   scroll(event) {
     event.preventDefault();
@@ -90,13 +70,13 @@ class Genre extends React.Component{
 
           <div className="scrolling-wrapper">
             <div className="arrow" onClick={this.scroll}>
-              <i id="left-arrow" className="fas fa-chevron-left" />
+              <i id="right-arrow" className="fas fa-chevron-left" />
             </div>
             <div className="pics" id="photos">
               {photos}
             </div>
             <div className="arrow" onClick={this.scroll}>
-              <i id="right-arrow" className="fas fa-chevron-right" />
+              <i id="left-arrow" className="fas fa-chevron-right" />
             </div>
           </div>
         </div>
