@@ -1,5 +1,3 @@
-
-
 json.movies do 
   @movies.each do |movie|
     json.set! movie.id do

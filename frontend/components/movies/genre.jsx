@@ -6,9 +6,7 @@ class Genre extends React.Component{
     super(props);
 
     this.addListItem = this.addListItem.bind(this);
-
     this.scroll = this.scroll.bind(this);
-
   }
 
   addListItem(movieId) {
@@ -18,10 +16,10 @@ class Genre extends React.Component{
   scroll(event) {
     event.preventDefault();
 
-    let $item = $('.image'), //Cache your DOM selector
+    let $item = $('.image'), 
       visible = 2, //Set the number of items that will be visible
       index = 0, //Starting index
-      endIndex = ($item.length / visible) - 1; //End index (NOTE:: Requires visible to be a factor of $item.length... You can improve this by rounding...)
+      endIndex = ($item.length / visible) - 1; 
 
     $('#right-arrow').click(function () {
       if (index < endIndex) {

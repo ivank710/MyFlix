@@ -51,11 +51,9 @@ class FeaturedMovie extends React.Component{
             </span>
           </Link>
 
-          {/* <Link to={`/lists/${this.state.user_id}`}> */}
           <span className="list-button" id="my-list" onClick={this.addItem}>
             <div className="list-text">+ &nbsp;My List</div>
           </span>
-          {/* </Link> */}
 
           <div className="title">The Piazza dei Miracoli </div>
           <div className="description-box">
@@ -66,8 +64,6 @@ class FeaturedMovie extends React.Component{
             </div>
           </div>
         </div>
-
-        
       </>
     );
   }

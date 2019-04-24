@@ -21,11 +21,8 @@ class Api::ListsController < ApplicationController
   end
 
   def destroy
-    # debugger
-    # @list = List.find(params[:id])
     @list = current_user.list.find_by(movie_id: params[:id])
 
-    # debugger
     if @list
       @list.destroy
       render 'api/lists/show'
@@ -34,6 +31,4 @@ class Api::ListsController < ApplicationController
     end
   end
 
- 
-  
 end

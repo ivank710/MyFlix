@@ -23,9 +23,7 @@ class List extends React.Component{
   render() {
     let pics = this.props.lists.map((movie) => {
       return (
-
         <div className="list-img">
-
           <Link to={`/browse/${movie.id}`}>
             <img src={movie.pic} alt=""/>
               <div className="list-title">{movie.title}</div>
@@ -37,7 +35,6 @@ class List extends React.Component{
             </div>
           </Link>
         </div>
-
       )
     })
 
