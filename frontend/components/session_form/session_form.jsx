@@ -44,10 +44,10 @@ class SessionForm extends React.Component {
   demoLogin(email, password) {
     if(email.length > 0) {
       this.setState({email: this.state.email += email.shift()},
-        () => window.setTimeout(() => this.demoLogin(email, password), 65));
+        () => window.setTimeout(() => this.demoLogin(email, password), 60));
     } else if(password.length > 0) {
       this.setState({password: this.state.password += password.shift()},
-        () => window.setTimeout(() => this.demoLogin(email, password), 75));
+        () => window.setTimeout(() => this.demoLogin(email, password), 70));
     } else if(email.length === 0 && password.length === 0) {
       this.props.demoLogin(this.state);
     }
@@ -80,27 +80,23 @@ class SessionForm extends React.Component {
             <div className='login_form'>
               <br/>
               <div className='sign_in_tag'>{this.props.formType}</div>
-              <br/><br/><br/>
               <input type="text" value={this.state.email} onChange={this.update('email')} 
                 className='login_input' placeholder="Email" id="email"/>
                 <br/>
               <input type="password" value={this.state.password} onChange={this.update('password')} 
                 className='login_input' placeholder="Password" id="password"/>
-              <br/> <br/>
-            
+              <br/><br/>
 
               <div className="errors_box">
                 <div className="errors">{this.renderErrors()}</div>
               </div>
 
-              <br /> <br/>
+              <br/><br/>
               <input type="submit" onClick={this.handleSubmit} 
                 value={this.props.formType} className="session_submit" id="submit"/>
-              <br /> 
               <input type="submit" onClick={this.handleDemoSubmit} 
                 value='Demo' className="demo_submit" />
 
-            <br /><br /><br /><br /> <br/><br/>
               <div className='user_tag_parent'>
                 <div className="form_type">Please {this.props.formType} or </div>
                 &nbsp;&nbsp;

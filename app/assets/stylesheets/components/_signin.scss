@@ -28,7 +28,7 @@ a{
 
 
 .sign_in_tag{
- 
+  margin-bottom: 40px;
   color: white;
   font-family: sans-serif;
   font-size: 35px;
@@ -141,6 +141,7 @@ input[type=submit]:focus {
   padding: 11px 18px;
   font-size: 22px;
   font-weight: 200;
+  margin-bottom: 25px;
 
   &:hover{
     cursor: pointer;
@@ -184,6 +185,7 @@ input[type=submit]:focus {
   font-size: 22px;
   font-family: sans-serif;
   font-weight: 200;
+  margin-top: 90px;
 }
 
 .form_type{
