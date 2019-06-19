@@ -22,16 +22,19 @@ class Genre extends React.Component{
   }
 
   scrollLeft() {
-    this.setState({start: this.state.start + 1});
+    let pos = (this.state.start - 1) % this.props.movies.length;
+    this.setState({start: pos});
   }
 
   scrollRight() {
-    this.setState({ start: this.state.start - 1 });
+    let pos = (this.state.start + 1) % this.props.movies.length;
+    this.setState({ start: pos});
   }
 
   render() {
-
-    let photos = this.props.movies.slice(this.state.start % this.props.movies.length).map(movie => {
+    let movies = this.props.movies;
+    let start = this.state.start;
+    let photos = movies.slice(start).concat(movies.slice(0,start)).map(movie => {
       return (
         <>
           <div className="image" key={movie.title}>
