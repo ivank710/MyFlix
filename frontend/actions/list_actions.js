@@ -27,7 +27,7 @@ export const fetchListItems = () => dispatch => {
 export const createListItem = (movieId) => (dispatch, getState) => {
   return ListUtil.createListItem(movieId)
   .then((item) => {
-    const movie = getState().entities.movies[item.movie_id]
+    const movie = getState().entities.movies[item.movie_id];
     return dispatch(receiveListItem(movie));
   })
 };
