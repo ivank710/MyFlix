@@ -23,7 +23,7 @@ class MovieShow extends React.Component{
         <div className="back_container">
           <Link to="/browse">
               <div className="left-arrow">
-                <i class="fas fa-arrow-left fa-3x"></i>
+                <i className="fas fa-arrow-left fa-3x"></i>
               </div>
           </Link>
   

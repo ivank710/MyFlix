@@ -4,41 +4,34 @@ import {Link} from 'react-router-dom';
 class Genre extends React.Component{
   constructor(props) {
     super(props);
-
+    this.state = {
+      start: 0,
+    };
+  
     this.addListItem = this.addListItem.bind(this);
-    this.scroll = this.scroll.bind(this);
+    this.scrollLeft = this.scrollLeft.bind(this);
+    this.scrollRight = this.scrollRight.bind(this);
+  }
+
+  componentDidMount() {
+    // this.scrollListener();
   }
 
   addListItem(movieId) {
     this.props.createListItem(movieId);
   }
 
-  scroll(event) {
-    event.preventDefault();
-
-    let $item = $('.image'), 
-      visible = 2, //Set the number of items that will be visible
-      index = 0, //Starting index
-      endIndex = ($item.length / visible) - 1; 
-
-    $('#right-arrow').click(function () {
-      if (index < endIndex) {
-        index++;
-        $item.animate({ 'left': '-=300px' });
-      }
-    });
-
-    $('#left-arrow').click(function () {
-      if (index > 0) {
-        index--;
-        $item.animate({ 'left': '+=300px' });
-      }
-    });
+  scrollLeft() {
+    this.setState({start: this.state.start + 1});
   }
 
+  scrollRight() {
+    this.setState({ start: this.state.start - 1 });
+  }
 
   render() {
-    let photos = this.props.movies.map(movie => {
+
+    let photos = this.props.movies.slice(this.state.start % this.props.movies.length).map(movie => {
       return (
         <>
           <div className="image" key={movie.title}>
@@ -66,22 +59,23 @@ class Genre extends React.Component{
         <div className="genre_container">
           <div className="genre">{this.props.name}</div>
 
-          <div className="scrolling-wrapper">
-            <div className="arrow" onClick={this.scroll}>
-              <i id="right-arrow" className="fas fa-chevron-left" />
-            </div>
-            <div className="pics" id="photos">
+          <nav className="scrolling-wrapper" id="photoContainer">
+            <button className="pn-Advancer pn-Advancer_Left" onClick={() => this.scrollLeft()}>
+              <i id="arrow" className="fas fa-chevron-left fa-3x" />
+            </button>
+            <div className="pics" id="photoContents">
+              {/* //className: image */}
               {photos}
             </div>
-            <div className="arrow" onClick={this.scroll}>
-              <i id="left-arrow" className="fas fa-chevron-right" />
-            </div>
-          </div>
+            <button className="pn-Advancer pn-Advancer_Right" onClick={() => this.scrollRight()}>
+              <i id="arrow" className="fas fa-chevron-right fa-3x" />
+            </button>
+          </nav>
         </div>
       </>
     );
   }
-
+  
 }
 
 

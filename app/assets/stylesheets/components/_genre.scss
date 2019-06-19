@@ -10,9 +10,6 @@
   font-weight: lighter;
 }
 
-
-
-
 .fa-play-circle{
   color: white;
   padding-left: 30px;
@@ -32,8 +29,6 @@
     color: red;
   }
 }
-
-
 
 .play {
   position: absolute;
@@ -58,15 +53,12 @@
     font-family: sans-serif;
     font-size: 17px;
   }
-  
 }
 
-
-
 .image {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: row;
+  // flex: 0 0 auto;
+  // display: flex;
+  // flex-direction: row;
 }
 
 img{
@@ -76,132 +68,107 @@ img{
   padding-left: 3px;
   z-index: -5;
 }
-// }
 
-
-// .scrolling-wrapper {
-  //   -webkit-overflow-scrolling: touch;
-  // }
-  
-  .scrolling-wrapper {
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-  
-  
-  .scrolling-wrapper {
-    display: flex;
-    flex-direction: row;
-    // margin-top: 10px; //spaces b/t name and images
-    // margin-bottom: 10px;
-    
-    
-    &:hover {
-      .image {
-        transform: translateX(-25%);
-      }
-    }
-    
-    .image:hover ~ .image {
-      transform: translateX(25%);
-    }
-    
-    .image {
-      
-      flex: 1 1 0px;
-      transition: transform 400ms ease 100ms;
-      
-      &:after {
-        content: "";
-        display: block;
-      }
-      
-      &:hover {
-        transform: scale(1.5);
-        
-        .play {
-          opacity: 1;
-        }
-        
-      }
-    }
-  }
-
-  
 .scrolling-wrapper{
   height: 207px;
   padding-top: 35px;
-  padding-bottom: 35px;
+  padding-bottom: 15px;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-left: 50px;
+  // flex-wrap: nowrap;
+  // overflow-x: auto;
+  padding-left: 28px;
   background: #141414;
+}
+  
+.scrolling-wrapper {
+  overflow-x: auto;
+  /* We don't want vertical scrolling */
+  overflow-y: hidden;
+  /* Make an auto-hiding scroller for the 3 people using a IE */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* For WebKit implementations, provide inertia scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* We don't want internal inline elements to wrap */
+  white-space: nowrap;
+  /* Remove the default scrollbar for WebKit implementations */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:hover {
+    .image {
+      transform: translateX(-25%);
+    }
+  }
+  
+  .image:hover ~ .image {
+    transform: translateX(25%);
+  }
+  
+  .image {
+    flex: 1 1 0px;
+    transition: transform 400ms ease 100ms;
+    
+    &:after {
+      content: "";
+      display: block;
+    }
+    
+    &:hover {
+      transform: scale(1.5);
+      
+      .play {
+        opacity: 1;
+      }
+    }
+  }
 }
   
 .pics{
   display: flex;
   flex-direction: row;
   margin-right: 20px;
-}
-  
-#photos{
-  // width: 100rem;
-  // height: 150rem;
-  // position: absolute;
-  white-space: nowrap;
-  // overflow: hidden;
-  // overflow-y: hidden;
-  // overflow-x: scroll;
+
+  float: left;
 }
 
-
-#left-arrow{
-  padding: 15px;
-  position: relative;
-  z-index: 5;
-  top: 70px;
-  left: -45px;
+.pn-Advancer {
+  /* Reset the button */
+  appearance: none;
+  background: black;
+  // color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border: 0;
+  &:focus {
+      outline: 0;
+  }
+  /* Now style it as needed */
   color: white;
-  font-size: 30px;
+  z-index: 10;
+  position: absolute;
+      height: 100px;
+    width: 32px;
+    margin-top: 40px;
   cursor: pointer;
 }
 
-#right-arrow{
-  padding: 15px;
-  position: relative;
-  z-index: 5;
-  top: 70px;
-  right: 45px;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
+.pn-Advancer_Left {
+    left: 0;
 }
 
-.arrow{
-  width: 0;
+.pn-Advancer_Right {
+    right: 0;
 }
 
-.image {
-  position: relative;
-}
 
-.menu-item {
-  user-select: none;
-  cursor: pointer;
-  border: none;
-}
-.menu-item-wrapper.active {
-  border: 1px blue solid;
-}
-.menu-item.active {
-  border: 1px green solid;
-}
 
-.scroll-menu-arrow {
-  padding: 20px;
-  cursor: pointer;
-}
+
+
+
+
+
+
+
 
