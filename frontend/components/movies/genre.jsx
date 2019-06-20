@@ -13,10 +13,6 @@ class Genre extends React.Component{
     this.scrollRight = this.scrollRight.bind(this);
   }
 
-  componentDidMount() {
-    // this.scrollListener();
-  }
-
   addListItem(movieId) {
     this.props.createListItem(movieId);
   }
@@ -37,7 +33,7 @@ class Genre extends React.Component{
     let photos = movies.slice(start).concat(movies.slice(0,start)).map(movie => {
       return (
         <>
-          <div className="image" key={movie.title}>
+          <div className="image" key={movie.id}>
             <Link to={`/browse/${movie.id}`}>
               <img src={movie.photo} alt="" />
               <div className="play">
