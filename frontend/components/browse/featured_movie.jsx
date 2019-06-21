@@ -45,7 +45,7 @@ class FeaturedMovie extends React.Component{
             {" "}
             <strong>WORLDFLIX</strong> ORIGINAL
           </div>
-          <Link to="/browse/4">
+          <Link to="/browse/26">
             <span className="play-button">
               <div className="play-text">▶ &nbsp;Play</div>
             </span>

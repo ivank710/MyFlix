@@ -5,8 +5,8 @@ class MovieShow extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      euroMovies: ["1", "2", "3", "4", "5", "6", "7"],
-      asiaMovies: ["8", "9", "10", "11", "12", "13", "14"]
+      euroMovies: ["23", "24", "25", "26", "27", "28", "29"],
+      asiaMovies: ["30", "31", "32", "33", "34", "35", "36"]
     };
 
     this.playNextMovie = this.playNextMovie.bind(this);
