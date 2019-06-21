@@ -35,7 +35,7 @@
 	opacity: 0;
   z-index: 5;
   top: 60%;
-  left: 20%;
+  left: 24%;
   transform: translateX(-50%) translateY(-50%);
   display: flex;
 	align-items: center;
@@ -75,9 +75,7 @@ img{
   padding-bottom: 15px;
   display: flex;
   flex-direction: row;
-  // flex-wrap: nowrap;
-  // overflow-x: auto;
-  padding-left: 28px;
+  padding-left: 47px;
   background: #141414;
 }
   
@@ -148,9 +146,9 @@ img{
   color: white;
   z-index: 10;
   position: absolute;
-      height: 100px;
-    width: 32px;
-    margin-top: 40px;
+  height: 100px;
+  width: 50px;
+  margin-top: 40px;
   cursor: pointer;
 }
 

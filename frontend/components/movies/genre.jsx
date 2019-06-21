@@ -60,14 +60,13 @@ class Genre extends React.Component{
 
           <nav className="scrolling-wrapper" id="photoContainer">
             <button className="pn-Advancer pn-Advancer_Left" onClick={() => this.scrollLeft()}>
-              <i id="arrow" className="fas fa-chevron-left fa-3x" />
+              <i id="arrow" className="fas fa-chevron-left fa-4x" />
             </button>
             <div className="pics" id="photoContents">
-              {/* //className: image */}
               {photos}
             </div>
             <button className="pn-Advancer pn-Advancer_Right" onClick={() => this.scrollRight()}>
-              <i id="arrow" className="fas fa-chevron-right fa-3x" />
+              <i id="arrow" className="fas fa-chevron-right fa-4x" />
             </button>
           </nav>
         </div>
