@@ -6,7 +6,7 @@ class FeaturedMovie extends React.Component{
     super(props);
     this.state = {
       user_id: this.props.currentUser.id,
-      movie_id: 4
+      movie_id: 26
     };
     this.addItem = this.addItem.bind(this);
     this.playVid = this.playVid.bind(this);
